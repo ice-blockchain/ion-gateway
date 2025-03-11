@@ -1,6 +1,6 @@
 {
-  "name": "tonconnect",
-  "version": "2.0.0",
+  "name": "ion-gateway",
+  "version": "2.0.1",
   "license": "MIT",
   "scripts": {
     "generateDocs": "npx typedoc"
