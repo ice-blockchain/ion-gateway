@@ -1796,6 +1796,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ion-gateway/protocol@workspace:packages/protocol":
+  version: 0.0.0-use.local
+  resolution: "@ion-gateway/protocol@workspace:packages/protocol"
+  dependencies:
+    "@rollup/plugin-typescript": "npm:^11.0.0"
+    "@types/jest": "npm:^29.2.0"
+    jest: "npm:^29.2.2"
+    rollup: "npm:^3.18.0"
+    ts-jest: "npm:^29.0.3"
+    tweetnacl: "npm:^1.0.3"
+    tweetnacl-util: "npm:^0.15.1"
+  languageName: unknown
+  linkType: soft
+
 "@isaacs/cliui@npm:^8.0.2":
   version: 8.0.2
   resolution: "@isaacs/cliui@npm:8.0.2"
@@ -3095,19 +3109,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@tonconnect/protocol@npm:^2.2.7, @tonconnect/protocol@workspace:packages/protocol":
-  version: 0.0.0-use.local
-  resolution: "@tonconnect/protocol@workspace:packages/protocol"
+"@tonconnect/protocol@npm:^2.2.7":
+  version: 2.2.7
+  resolution: "@tonconnect/protocol@npm:2.2.7"
   dependencies:
-    "@rollup/plugin-typescript": "npm:^11.0.0"
-    "@types/jest": "npm:^29.2.0"
-    jest: "npm:^29.2.2"
-    rollup: "npm:^3.18.0"
-    ts-jest: "npm:^29.0.3"
     tweetnacl: "npm:^1.0.3"
     tweetnacl-util: "npm:^0.15.1"
-  languageName: unknown
-  linkType: soft
+  checksum: 10c0/f007e1c8939ebd74018646931869134d56e2bb3225d6cb8359dfb55a07005896cc806428be4bc5a131043a85da0303f532febeaf433b739807efbddfaea23240
+  languageName: node
+  linkType: hard
 
 "@tonconnect/sdk@npm:3.0.7, @tonconnect/sdk@workspace:packages/sdk":
   version: 0.0.0-use.local
@@ -7787,6 +7797,32 @@ __metadata:
   checksum: 10c0/6f3c4d0aa6ec1b43a8862375588a249e3c917739895cbe67fe12f0a76260ea632af51e8e2431b50fbcd0145356dc28ca147be08dbe6a523739fd55c0f91dc2a5
   languageName: node
   linkType: hard
+
+"ion-gateway@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "ion-gateway@workspace:."
+  dependencies:
+    "@jscutlery/semver": "npm:^2.29.3"
+    "@microsoft/api-extractor": "npm:^7.34.4"
+    "@nrwl/cli": "npm:14.8.5"
+    "@nrwl/devkit": "npm:^15.0.0"
+    "@nrwl/eslint-plugin-nx": "npm:^15.0.0"
+    "@nrwl/workspace": "npm:14.8.5"
+    "@typescript-eslint/eslint-plugin": "npm:^5.38.1"
+    "@typescript-eslint/parser": "npm:^5.38.1"
+    eslint: "npm:8.22.0"
+    eslint-config-airbnb-typescript: "npm:^17.0.0"
+    eslint-config-prettier: "npm:^8.5.0"
+    eslint-plugin-import: "npm:^2.26.0"
+    eslint-plugin-prettier: "npm:^4.2.1"
+    eslint-plugin-unused-imports: "npm:^2.0.0"
+    nx: "npm:14.8.5"
+    prettier: "npm:^2.7.1"
+    rimraf: "npm:^3.0.2"
+    typedoc: "npm:^0.23.21"
+    typescript: "npm:~4.8.2"
+  languageName: unknown
+  linkType: soft
 
 "ip-address@npm:^9.0.5":
   version: 9.0.5
@@ -12535,32 +12571,6 @@ __metadata:
   checksum: 10c0/487988b0a19c654ff3e1961b87f471702e708fa8a8dd02a298ef16da7206692e8552a0250e8b3e8759270f62e9d8314616f6da274734d3b558b1fc7b7724e892
   languageName: node
   linkType: hard
-
-"tonconnect@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "tonconnect@workspace:."
-  dependencies:
-    "@jscutlery/semver": "npm:^2.29.3"
-    "@microsoft/api-extractor": "npm:^7.34.4"
-    "@nrwl/cli": "npm:14.8.5"
-    "@nrwl/devkit": "npm:^15.0.0"
-    "@nrwl/eslint-plugin-nx": "npm:^15.0.0"
-    "@nrwl/workspace": "npm:14.8.5"
-    "@typescript-eslint/eslint-plugin": "npm:^5.38.1"
-    "@typescript-eslint/parser": "npm:^5.38.1"
-    eslint: "npm:8.22.0"
-    eslint-config-airbnb-typescript: "npm:^17.0.0"
-    eslint-config-prettier: "npm:^8.5.0"
-    eslint-plugin-import: "npm:^2.26.0"
-    eslint-plugin-prettier: "npm:^4.2.1"
-    eslint-plugin-unused-imports: "npm:^2.0.0"
-    nx: "npm:14.8.5"
-    prettier: "npm:^2.7.1"
-    rimraf: "npm:^3.0.2"
-    typedoc: "npm:^0.23.21"
-    typescript: "npm:~4.8.2"
-  languageName: unknown
-  linkType: soft
 
 "totalist@npm:^3.0.0":
   version: 3.0.1
