@@ -17,7 +17,6 @@
   ],
   "author": "tonconnect",
   "license": "Apache-2.0",
-  "scripts": {},
   "files": [
     "browser.js",
     "index.js",
