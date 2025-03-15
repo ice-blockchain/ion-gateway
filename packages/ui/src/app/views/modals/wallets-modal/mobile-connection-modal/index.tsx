@@ -1,4 +1,4 @@
-import { ConnectAdditionalRequest, isTelegramUrl, WalletInfoRemote } from '@tonconnect/sdk';
+import { ConnectAdditionalRequest, isTelegramUrl, WalletInfoRemote } from '@ion-gateway/sdk';
 import { Component, createMemo, createSignal, onCleanup, Show, useContext } from 'solid-js';
 import {
     BodyStyled,

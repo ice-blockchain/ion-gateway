@@ -31,7 +31,7 @@ module.exports = {
             fallbackModuleFilenameTemplate: '[resource-path]'
         }),
         new webpack.DefinePlugin({
-            TON_CONNECT_SDK_VERSION: JSON.stringify(version)
+            ION_CONNECT_SDK_VERSION: JSON.stringify(version)
         })
     ],
     resolve: {
@@ -41,7 +41,7 @@ module.exports = {
         }
     },
     output: {
-        filename: 'tonconnect-sdk.min.js',
+        filename: 'ionconnect-sdk.min.js',
         path: path.resolve(__dirname, 'dist'),
         library: 'TonConnectSDK',
         clean: true

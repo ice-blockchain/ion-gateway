@@ -1,4 +1,4 @@
-import { DeviceInfo, KeyPair, SessionCrypto, TonAddressItemReply } from '@tonconnect/protocol';
+import { DeviceInfo, KeyPair, SessionCrypto, TonAddressItemReply } from '@ion-gateway/protocol';
 import { BridgeSessionRaw } from 'src/provider/bridge/models/bridge-session-raw';
 import { BridgeSession } from './bridge-session';
 import { WalletConnectionSourceHTTP } from 'src/models';

@@ -6,7 +6,7 @@ import {
     RpcMethod,
     WalletEvent,
     WalletResponse
-} from '@tonconnect/protocol';
+} from '@ion-gateway/protocol';
 import { WalletInfoDTO } from 'src/models/wallet/wallet-info';
 import { hasProperties, hasProperty } from 'src/utils/types';
 
@@ -29,13 +29,13 @@ export interface InjectedWalletApi {
     disconnect(): void;
 }
 
-export function isJSBridgeWithMetadata(value: unknown): value is { tonconnect: InjectedWalletApi } {
+export function isJSBridgeWithMetadata(value: unknown): value is { ionconnect: InjectedWalletApi } {
     try {
-        if (!hasProperty(value, 'tonconnect') || !hasProperty(value.tonconnect, 'walletInfo')) {
+        if (!hasProperty(value, 'ionconnect') || !hasProperty(value.ionconnect, 'walletInfo')) {
             return false;
         }
 
-        return hasProperties(value.tonconnect.walletInfo, [
+        return hasProperties(value.ionconnect.walletInfo, [
             'name',
             'app_name',
             'image',

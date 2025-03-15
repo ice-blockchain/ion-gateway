@@ -5,7 +5,7 @@ export { TonIcon } from './ton-icon';
 export { SuccessIcon } from './success-icon';
 export { ErrorIcon } from './error-icon';
 export { LoaderIcon } from './loader-icon';
-export { TonConnectBrand } from './ton-connect-brand';
+export { TonConnectBrand } from './ion-gateway-brand';
 export { QuestionIcon } from './question-icon';
 export { BrowserIcon } from './browser-icon';
 export { MobileIcon } from './mobile-icon';

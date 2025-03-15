@@ -1,4 +1,4 @@
-import { SessionCrypto } from '@tonconnect/protocol';
+import { SessionCrypto } from '@ion-gateway/protocol';
 import { TonConnectError } from 'src/errors';
 import { BridgeSessionRaw } from 'src/provider/bridge/models/bridge-session-raw';
 import {
@@ -14,7 +14,7 @@ import {
 import { IStorage } from 'src/storage/models/storage.interface';
 
 export class BridgeConnectionStorage {
-    private readonly storeKey = 'ton-connect-storage_bridge-connection';
+    private readonly storeKey = 'ion-gateway-storage_bridge-connection';
 
     constructor(private readonly storage: IStorage) {}
 

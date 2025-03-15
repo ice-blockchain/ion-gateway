@@ -3,7 +3,7 @@ import { Styleable } from 'src/app/models/styleable';
 import { PersonalizedWalletInfo } from 'src/app/models/personalized-wallet-info';
 import { AT_WALLET_APP_NAME } from 'src/app/env/AT_WALLET_APP_NAME';
 import { WalletItem } from 'src/app/components';
-import { isWalletInfoCurrentlyInjected } from '@tonconnect/sdk';
+import { isWalletInfoCurrentlyInjected } from '@ion-gateway/sdk';
 import { IMG } from 'src/app/env/IMG';
 import { useI18n } from '@solid-primitives/i18n';
 
@@ -25,7 +25,7 @@ export const WalletLabeledItem: Component<WalletLabeledItemProps> = props => {
         if (isWalletInfoCurrentlyInjected(props.wallet)) {
             return t('walletItem.installed', {}, 'Installed');
         }
-        if (props.wallet.name === 'Tonkeeper') {
+        if (props.wallet.name === 'ION Wallet') {
             return t('walletItem.popular', {}, 'Popular');
         }
         return undefined;

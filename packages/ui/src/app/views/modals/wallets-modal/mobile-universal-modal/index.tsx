@@ -1,4 +1,4 @@
-import { ConnectAdditionalRequest, isWalletInfoRemote, WalletInfo } from '@tonconnect/sdk';
+import { ConnectAdditionalRequest, isWalletInfoRemote, WalletInfo } from '@ion-gateway/sdk';
 import { Component, createMemo, createSignal, For, Show } from 'solid-js';
 import { AtWalletIcon, FourWalletsItem, QRIcon, WalletItem } from 'src/app/components';
 import {
@@ -140,7 +140,7 @@ export const MobileUniversalModal: Component<MobileUniversalModalProps> = props 
             <Show when={!showQR()}>
                 <StyledLeftActionButton icon={<QRIcon />} onClick={onOpenQR} />
                 <H1Styled translationKey="walletModal.mobileUniversalModal.connectYourWallet">
-                    Connect your TON wallet
+                    Connect your ION wallet
                 </H1Styled>
                 <H2Styled
                     translationKey="walletModal.mobileUniversalModal.openWalletOnTelegramOrSelect"

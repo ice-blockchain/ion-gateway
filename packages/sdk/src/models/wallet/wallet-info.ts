@@ -23,7 +23,7 @@ export interface WalletInfoBase {
     tondns?: string;
 
     /**
-     * Info or landing page of your wallet. May be useful for TON newcomers.
+     * Info or landing page of your wallet. May be useful for ION newcomers.
      */
     aboutUrl: string;
 
@@ -47,17 +47,17 @@ export interface WalletInfoBase {
  */
 export interface WalletInfoRemote extends WalletInfoBase {
     /**
-     * Base part of the wallet universal url. The link should support [Ton Connect parameters]{@link https://github.com/ton-connect/docs/blob/main/bridge.md#universal-link}.
+     * Base part of the wallet universal url. The link should support [Ton Connect parameters]{@link https://github.com/ion-gateway/docs/blob/main/bridge.md#universal-link}.
      */
     universalLink: string;
 
     /**
-     * Native wallet app deepLink. The link should support [Ton Connect parameters]{@link https://github.com/ton-connect/docs/blob/main/bridge.md#universal-link}.
+     * Native wallet app deepLink. The link should support [Ton Connect parameters]{@link https://github.com/ion-gateway/docs/blob/main/bridge.md#universal-link}.
      */
     deepLink?: string;
 
     /**
-     * Url of the wallet's implementation of the [HTTP bridge]{@link https://github.com/ton-connect/docs/blob/main/bridge.md#http-bridge}.
+     * Url of the wallet's implementation of the [HTTP bridge]{@link https://github.com/ion-gateway/docs/blob/main/bridge.md#http-bridge}.
      */
     bridgeUrl: string;
 }

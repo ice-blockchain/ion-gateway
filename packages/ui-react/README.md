@@ -1,38 +1,38 @@
-# TON Connect UI React
+# ION Gateway UI React
 
-TonConnect UI React is a React UI kit for TonConnect SDK. Use it to connect your app to TON wallets via TonConnect protocol in React apps.
+TonConnect UI React is a React UI kit for TonConnect SDK. Use it to connect your app to ION wallets via TonConnect protocol in React apps.
 
-If you don't use React for your app, take a look at [TonConnect UI](https://github.com/ton-connect/sdk/tree/main/packages/ui).
+If you don't use React for your app, take a look at [TonConnect UI](https://github.com/ion-gateway/sdk/tree/main/packages/ui).
 
-If you want to use TonConnect on the server side, you should use the [TonConnect SDK](https://github.com/ton-connect/sdk/tree/main/packages/sdk).
+If you want to use TonConnect on the server side, you should use the [TonConnect SDK](https://github.com/ion-gateway/sdk/tree/main/packages/sdk).
 
-You can find more details and the protocol specification in the [docs](https://docs.ton.org/develop/dapps/ton-connect/overview).
+You can find more details and the protocol specification in the [docs](https://docs.ton.org/develop/dapps/ion-gateway/overview).
 
 ---
 
 # Getting started
 
-[Latest API documentation](https://ton-connect.github.io/sdk/modules/_tonconnect_ui-react.html)
+[Latest API documentation](https://ion-gateway.github.io/sdk/modules/_ionconnect_ui-react.html)
 
 # Getting started
 
 ## Installation with npm
-`npm i @tonconnect/ui-react`
+`npm i @ion-gateway/ui-react`
 
 # Usage
 
 ## Add TonConnectUIProvider
 Add TonConnectUIProvider to the root of the app. You can specify UI options using props.
-[See all available options](https://ton-connect.github.io/sdk/types/_tonconnect_ui_react.TonConnectUIProviderProps.html)
+[See all available options](https://ion-gateway.github.io/sdk/types/_ionconnect_ui_react.TonConnectUIProviderProps.html)
 
 All TonConnect UI hooks calls and `<TonConnectButton />` component must be placed inside `<TonConnectUIProvider>`.
 
 ```tsx
-import { TonConnectUIProvider } from '@tonconnect/ui-react';
+import { TonConnectUIProvider } from '@ion-gateway/ui-react';
 
 export function App() {
     return (
-        <TonConnectUIProvider manifestUrl="https://<YOUR_APP_URL>/tonconnect-manifest.json">
+        <TonConnectUIProvider manifestUrl="https://<YOUR_APP_URL>/ionconnect-manifest.json">
             { /* Your app */ }
         </TonConnectUIProvider>
     );
@@ -65,7 +65,7 @@ You can add `className` and `style` props to the button as well. Note that you c
 Use it to get user's current ton wallet address. Pass boolean parameter isUserFriendly to choose format of the address. If wallet is not connected hook will return empty string.
 
 ```tsx
-import { useTonAddress } from '@tonconnect/ui-react';
+import { useTonAddress } from '@ion-gateway/ui-react';
 
 export const Address = () => {
     const userFriendlyAddress = useTonAddress();
@@ -87,11 +87,11 @@ Use it to get user's current ton wallet. If wallet is not connected hook will re
 
 See all wallet's properties
 
-[Wallet interface](https://ton-connect.github.io/sdk/interfaces/_tonconnect_sdk.Wallet.html)
-[WalletInfo interface](https://ton-connect.github.io/sdk/types/_tonconnect_sdk.WalletInfo.html)
+[Wallet interface](https://ion-gateway.github.io/sdk/interfaces/_ionconnect_sdk.Wallet.html)
+[WalletInfo interface](https://ion-gateway.github.io/sdk/types/_ionconnect_sdk.WalletInfo.html)
 
 ```tsx
-import { useTonWallet } from '@tonconnect/ui-react';
+import { useTonWallet } from '@ion-gateway/ui-react';
 
 export const Wallet = () => {
     const wallet = useTonWallet();
@@ -112,7 +112,7 @@ export const Wallet = () => {
 Use this hook to access the functions for opening and closing the modal window. The hook returns an object with the current modal state and methods to open and close the modal.
 
 ```tsx
-import { useTonConnectModal } from '@tonconnect/ui-react';
+import { useTonConnectModal } from '@ion-gateway/ui-react';
 
 export const ModalControl = () => {
     const { state, open, close } = useTonConnectModal();
@@ -130,13 +130,13 @@ export const ModalControl = () => {
 ### useTonConnectUI
 Use it to get access to the `TonConnectUI` instance and UI options updating function.
 
-[See more about TonConnectUI instance methods](https://github.com/ton-connect/sdk/tree/main/packages/ui#send-transaction)
+[See more about TonConnectUI instance methods](https://github.com/ion-gateway/sdk/tree/main/packages/ui#send-transaction)
 
-[See more about setOptions function](https://github.com/ton-connect/sdk/tree/main/packages/ui#change-options-if-needed)
+[See more about setOptions function](https://github.com/ion-gateway/sdk/tree/main/packages/ui#change-options-if-needed)
 
 
 ```tsx
-import { Locales, useTonConnectUI } from '@tonconnect/ui-react';
+import { Locales, useTonConnectUI } from '@ion-gateway/ui-react';
 
 export const Settings = () => {
     const [tonConnectUI, setOptions] = useTonConnectUI();
@@ -184,7 +184,7 @@ Indicates current status of the connection restoring process.
 You can use it to detect when connection restoring process if finished.
 
 ```tsx
-import { useIsConnectionRestored } from '@tonconnect/ui-react';
+import { useIsConnectionRestored } from '@ion-gateway/ui-react';
 
 export const EntrypointPage = () => {
     const connectionRestored = useIsConnectionRestored();
@@ -264,7 +264,7 @@ if (!tonProofPayload) {
 You can find `ton_proof` result in the `wallet` object when wallet will be connected:
 
 ```ts
-import {useTonConnectUI} from "@tonconnect/ui-react";
+import {useTonConnectUI} from "@ion-gateway/ui-react";
 
 const [tonConnectUI] = useTonConnectUI();
 
@@ -283,12 +283,12 @@ useEffect(() =>
 If you encounter any issues with the Android back handler, such as modals not closing properly when the back button is pressed, or conflicts with `history.pushState()` if you are manually handling browser history in your application, you can disable the back handler by setting `enableAndroidBackHandler` to `false`:
 
 ```tsx
-import { TonConnectUIProvider } from '@tonconnect/ui-react';
+import { TonConnectUIProvider } from '@ion-gateway/ui-react';
 
 export function App() {
     return (
         <TonConnectUIProvider 
-          manifestUrl="https://<YOUR_APP_URL>/tonconnect-manifest.json"
+          manifestUrl="https://<YOUR_APP_URL>/ionconnect-manifest.json"
           enableAndroidBackHandler={false}
         >
             { /* Your app */ }
@@ -299,7 +299,7 @@ export function App() {
 
 This will disable the custom back button behavior on Android, and you can then handle the back button press manually in your application.
 
-While we do not foresee any problems arising with the Android back handler, but if you find yourself needing to disable it due to an issue, please describe the problem in on [GitHub Issues](https://github.com/ton-connect/sdk/issues), so we can assist you further.
+While we do not foresee any problems arising with the Android back handler, but if you find yourself needing to disable it due to an issue, please describe the problem in on [GitHub Issues](https://github.com/ion-gateway/sdk/issues), so we can assist you further.
 
 ## Animations not working
 
@@ -339,15 +339,15 @@ Module not found: Can't resolve 'encoding' in '.../node_modules/node-fetch/lib'
 
 Import trace for requested module:
 ./node_modules/node-fetch/lib/index.js
-./node_modules/@tonconnect/isomorphic-fetch/index.mjs
-./node_modules/@tonconnect/sdk/lib/esm/index.mjs
-./node_modules/@tonconnect/ui/lib/esm/index.mjs
-./node_modules/@tonconnect/ui-react/lib/esm/index.js
+./node_modules/@ion-gateway/isomorphic-fetch/index.mjs
+./node_modules/@ion-gateway/sdk/lib/esm/index.mjs
+./node_modules/@ion-gateway/ui/lib/esm/index.mjs
+./node_modules/@ion-gateway/ui-react/lib/esm/index.js
 ```
 
 Please note that this is just a warning and should not affect the functionality of your application. If you wish to suppress the warning, you have two options:
 
-1. (Recommended) Wait for us to remove the dependency on `@tonconnect/isomorphic-fetch` in future releases. This dependency will be removed when we drop support for Node.js versions below 18.
+1. (Recommended) Wait for us to remove the dependency on `@ion-gateway/isomorphic-fetch` in future releases. This dependency will be removed when we drop support for Node.js versions below 18.
 
 2. (Optional) Install the `encoding` package, to resolve the warning:
 ```shell
