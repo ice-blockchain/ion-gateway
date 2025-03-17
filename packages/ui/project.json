@@ -4,7 +4,7 @@
     "version": {
       "executor": "@jscutlery/semver:version",
       "options": {
-        "changelogHeader": "# Changelog @tonconnect/ui \n",
+        "changelogHeader": "# Changelog @ion-gateway/ui \n",
         "push": false
       }
     }

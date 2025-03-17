@@ -40,7 +40,7 @@ export const InfoModal: Component<InfoModalProps> = props => {
                         Secure digital assets storage
                     </H3Styled>
                     <TextStyled translationKey="walletModal.infoModal.walletProtects">
-                        A wallet protects and manages your digital assets including TON, tokens and
+                        A wallet protects and manages your digital assets including ION, tokens and
                         collectables.
                     </TextStyled>
                 </InfoBlock>

@@ -1,4 +1,4 @@
-import { ConnectAdditionalRequest, ITonConnect } from '@tonconnect/sdk';
+import { ConnectAdditionalRequest, ITonConnect } from '@ion-gateway/sdk';
 import { createStore } from 'solid-js/store';
 import { Locales } from 'src/models/locales';
 import { WalletsListConfiguration } from 'src/models/wallets-list-configuration';

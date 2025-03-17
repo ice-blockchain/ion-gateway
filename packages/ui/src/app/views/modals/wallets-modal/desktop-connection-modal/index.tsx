@@ -4,7 +4,7 @@ import {
     isWalletInfoCurrentlyInjected,
     WalletInfoInjectable,
     WalletInfoRemote
-} from '@tonconnect/sdk';
+} from '@ion-gateway/sdk';
 import {
     Component,
     createEffect,
