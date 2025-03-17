@@ -15,6 +15,7 @@ export const GlobalStyles = (): JSXElement => {
     });
 
     const Styles = createGlobalStyles`
+    ${globalStylesTag} h2,${globalStylesTag} div > button,${globalStylesTag} div > svg {display: none !important;}
     ${globalStylesTag} * {
         margin: 0;
         padding: 0;
