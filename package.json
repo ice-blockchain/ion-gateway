@@ -1,14 +1,13 @@
 {
-  "name": "ion-gateway",
-  "version": "2.0.2",
+  "name": "ionconnect",
+  "version": "2.0.0",
   "license": "MIT",
   "scripts": {
     "generateDocs": "npx typedoc"
   },
   "private": true,
+  "dependencies": {},
   "devDependencies": {
-    "@jscutlery/semver": "^2.29.3",
-    "@microsoft/api-extractor": "^7.34.4",
     "@nrwl/cli": "14.8.5",
     "@nrwl/devkit": "^15.0.0",
     "@nrwl/eslint-plugin-nx": "^15.0.0",
@@ -23,17 +22,13 @@
     "eslint-plugin-unused-imports": "^2.0.0",
     "nx": "14.8.5",
     "prettier": "^2.7.1",
+    "typescript": "~4.8.2",
     "rimraf": "^3.0.2",
     "typedoc": "^0.23.21",
-    "typescript": "~4.8.2"
+    "@jscutlery/semver": "^2.29.3",
+    "@microsoft/api-extractor": "^7.34.4"
   },
   "workspaces": [
-    "packages/isomorphic-eventsource",
-    "packages/isomorphic-fetch",
-    "packages/protocol",
-    "packages/sdk",
-    "packages/ui",
-    "packages/ui-react"
-  ],
-  "packageManager": "yarn@4.7.0"
+    "packages/**"
+  ]
 }

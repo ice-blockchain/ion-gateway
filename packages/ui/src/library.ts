@@ -1,5 +1,5 @@
-export { TonConnectUI as default } from './ton-connect-ui';
-export { TonConnectUI } from './ton-connect-ui';
+export { TonConnectUI as default } from './ion-gateway-ui';
+export { TonConnectUI } from './ion-gateway-ui';
 export type {
     UserActionEvent,
 } from './tracker/types';

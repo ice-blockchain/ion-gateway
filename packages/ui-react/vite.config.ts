@@ -22,7 +22,7 @@ export default defineConfig({
     lib: {
       formats: ['es', 'cjs'],
       entry: path.resolve('src/index.ts'),
-      name: '@tonconnect/ui-react',
+      name: '@ion-gateway/ui-react',
       fileName: (format) => {
         switch (format) {
           case 'es':
@@ -35,12 +35,14 @@ export default defineConfig({
       }
     },
     rollupOptions: {
-      external: ['react', 'react-dom', '@tonconnect/ui'],
+      external: ['react', 'react-dom', 'react-dom/client', 'react/jsx-runtime', '@ion-gateway/ui'],
       output: {
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
-          '@tonconnect/ui': 'TON_CONNECT_UI'
+          'react-dom/client': 'ReactDOMClient',
+          'react/jsx-runtime': 'ReactJSXRuntime',
+          '@ion-gateway/ui': 'ION_CONNECT_UI'
         }
       }
     }

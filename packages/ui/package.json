@@ -1,10 +1,10 @@
 {
-  "name": "@tonconnect/ui",
+  "name": "@ion-gateway/ui",
   "version": "2.0.12",
   "scripts": {
     "start": "vite --host",
     "dev": "vite",
-    "build": "tsc --noEmit --emitDeclarationOnly false && vite build && rollup -c rollup.config.mjs && vite build -c vite.cdn-config.ts && node ./scripts/patch-build_ssr-fix.js"
+    "build": "tsc --noEmit --emitDeclarationOnly false && vite build && rollup -c rollup.config.mjs && vite build -c vite.cdn-config.ts"
   },
   "nx": {
     "tags": [
@@ -13,23 +13,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ton-connect/sdk.git"
+    "url": "git+https://github.com/ion-gateway/sdk.git"
   },
-  "homepage": "https://github.com/ton-connect/sdk/tree/main/packages/ui",
+  "homepage": "https://github.com/ion-gateway/sdk/tree/main/packages/ui",
   "bugs": {
-    "url": "https://github.com/ton-connect/sdk/issues"
+    "url": "https://github.com/ice-blockchain/ion-gateway/issues"
   },
   "keywords": [
-    "TON",
+    "ION",
     "Wallet",
-    "ton-connect",
-    "tonconnect",
+    "ion-gateway",
+    "ionconnect",
     "Connect",
-    "Tonkeeper",
+    "ION Wallet",
     "sdk",
     "UI"
   ],
-  "author": "tonconnect",
+  "author": "ionconnect",
   "license": "Apache-2.0",
   "files": [
     "lib",
@@ -47,11 +47,12 @@
     }
   },
   "dependencies": {
-    "@tonconnect/sdk": "3.0.7",
+    "@ion-gateway/sdk": "3.0.7",
     "classnames": "^2.3.2",
     "csstype": "^3.1.1",
     "deepmerge": "^4.2.2",
-    "ua-parser-js": "^1.0.35"
+    "ua-parser-js": "^1.0.35",
+    "vite": "^6.2.2"
   },
   "devDependencies": {
     "@floating-ui/dom": "^1.0.12",
