@@ -27,7 +27,7 @@ cd ..
 
 cd ui || exit
 rm -rf dist lib node_modules
-yarn add vite
+yarn add vite typescript
 yarn build
 npm link
 yarn link --register
