@@ -35,6 +35,7 @@ cd ..
 
 cd ui-react || exit
 rm -rf lib node_modules
+yarn add typescript
 yarn build
 npm link
 yarn link --register
