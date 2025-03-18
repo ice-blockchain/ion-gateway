@@ -52,7 +52,8 @@
     "vite-plugin-dts": "^1.7.1"
   },
   "dependencies": {
-    "@ion-gateway/ui": "2.0.12"
+    "@ion-gateway/ui": "2.0.12",
+    "typescript": "^5.8.2"
   },
   "peerDependencies": {
     "react": ">=17.0.0",
