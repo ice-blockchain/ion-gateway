@@ -3,6 +3,7 @@ import {
     AppRequest,
     ConnectEventError,
     ConnectRequest,
+    Feature,
     RpcMethod,
     WalletEvent,
     WalletResponse
@@ -66,7 +67,8 @@ export class InjectedProvider<T extends string = string> implements InternalProv
             jsBridgeKey,
             injected: true,
             embedded: wallet.ionconnect.isWalletBrowser,
-            platforms: wallet.ionconnect.walletInfo.platforms
+            platforms: wallet.ionconnect.walletInfo.platforms,
+            features: wallet.ionconnect.walletInfo.features
         }));
     }
 
@@ -184,7 +186,9 @@ export class InjectedProvider<T extends string = string> implements InternalProv
     ): Promise<WithoutId<WalletResponse<T>>>;
     public async sendRequest<T extends RpcMethod>(
         request: WithoutId<AppRequest<T>>,
-        optionsOrOnRequestSent?: (() => void) | { onRequestSent?: () => void; signal?: AbortSignal; attempts?: number }
+        optionsOrOnRequestSent?:
+            | (() => void)
+            | { onRequestSent?: () => void; signal?: AbortSignal; attempts?: number }
     ): Promise<WithoutId<WalletResponse<T>>> {
         // TODO: remove deprecated method
         const options: {

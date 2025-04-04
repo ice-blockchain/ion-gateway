@@ -1,5 +1,27 @@
 # Changelog @ion-gateway/ui-react 
 
+## [2.1.1-beta.0](https://github.com/ion-gateway/sdk/compare/ui-react-2.1.0...ui-react-2.1.1-beta.0) (2025-03-27)
+
+
+
+# [2.1.0](https://github.com/ion-gateway/sdk/compare/ui-react-2.0.13-beta.1...ui-react-2.1.0) (2025-03-24)
+
+
+### Features
+
+* **ui-react:** refactor wallet required features from array to object structure ([083af0c](https://github.com/ion-gateway/sdk/commit/083af0c136acea37f08616c3a1ab71b208d95e2f))
+
+
+
+## [2.0.13-beta.1](https://github.com/ion-gateway/sdk/compare/ui-react-2.0.13-beta.0...ui-react-2.0.13-beta.1) (2025-03-18)
+
+
+### Features
+
+* **ui-react:** add support for required features ([d935402](https://github.com/ion-gateway/sdk/commit/d935402b9d270ff20e59c1b45d7f9f558a4bb9ad))
+
+
+
 ## [2.0.13-beta.0](https://github.com/ion-gateway/sdk/compare/ui-react-2.0.12...ui-react-2.0.13-beta.0) (2025-03-14)
 
 

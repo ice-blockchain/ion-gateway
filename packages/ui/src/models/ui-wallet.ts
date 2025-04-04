@@ -1,4 +1,3 @@
-import { WalletInfoBase, WalletInfoInjectable, WalletInfoRemote } from '@ion-gateway/sdk';
+import { WalletInfoInjectable, WalletInfoRemote } from '@ion-gateway/sdk';
 
-export type UIWallet = WalletInfoBase &
-    (Omit<WalletInfoInjectable, 'injected' | 'embedded'> | WalletInfoRemote);
+export type UIWallet = Omit<WalletInfoInjectable, 'injected' | 'embedded'> | WalletInfoRemote;

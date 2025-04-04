@@ -1,5 +1,37 @@
 # Changelog @ion-gateway/sdk 
 
+## [3.1.1-beta.0](https://github.com/ion-gateway/sdk/compare/sdk-3.1.0...sdk-3.1.1-beta.0) (2025-03-27)
+
+
+### Features
+
+* **sdk:** add pending connection expiration ([1e3a1a9](https://github.com/ion-gateway/sdk/commit/1e3a1a9fd4e981d3cee0403e9131728dba66b287))
+
+
+
+# [3.1.0](https://github.com/ion-gateway/sdk/compare/sdk-3.0.8-beta.0...sdk-3.1.0) (2025-03-24)
+
+
+### Features
+
+* **sdk:** refactor wallet required features from array to object structure ([b21c062](https://github.com/ion-gateway/sdk/commit/b21c062283655bc00affcdda42b04a6a7fbdcf2f))
+
+
+
+## [3.0.8-beta.0](https://github.com/ion-gateway/sdk/compare/sdk-3.0.7...sdk-3.0.8-beta.0) (2025-03-18)
+
+
+### Bug Fixes
+
+* eslint source tags ([4aaca93](https://github.com/ion-gateway/sdk/commit/4aaca93fe7b53e317a0ffa4b0d78b61026dd0948))
+
+
+### Features
+
+* **sdk:** add support for required features ([a33480f](https://github.com/ion-gateway/sdk/commit/a33480f64fdfe9ef36eb4359cbc31ca5cc9c7d58))
+
+
+
 ## [3.0.7](https://github.com/ion-gateway/sdk/compare/sdk-3.0.7-alpha.1...sdk-3.0.7) (2025-03-06)
 
 

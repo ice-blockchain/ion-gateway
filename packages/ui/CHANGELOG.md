@@ -1,5 +1,27 @@
 # Changelog @ion-gateway/ui 
 
+## [2.1.1-beta.0](https://github.com/ion-gateway/sdk/compare/ui-2.1.0...ui-2.1.1-beta.0) (2025-03-27)
+
+
+
+# [2.1.0](https://github.com/ion-gateway/sdk/compare/ui-2.0.13-beta.0...ui-2.1.0) (2025-03-24)
+
+
+### Features
+
+* **ui:** refactor wallet required features from array to object structure ([cac7983](https://github.com/ion-gateway/sdk/commit/cac79838a63d103c77d3ce50e3cc7d37756335ad))
+
+
+
+## [2.0.13-beta.0](https://github.com/ion-gateway/sdk/compare/ui-2.0.12...ui-2.0.13-beta.0) (2025-03-18)
+
+
+### Features
+
+* **ui:** add support for required features ([6d9d78a](https://github.com/ion-gateway/sdk/commit/6d9d78abc8a7d590ea07152117ef21fbb06331c7))
+
+
+
 ## [2.0.12](https://github.com/ion-gateway/sdk/compare/ui-2.0.12-alpha.1...ui-2.0.12) (2025-03-06)
 
 
