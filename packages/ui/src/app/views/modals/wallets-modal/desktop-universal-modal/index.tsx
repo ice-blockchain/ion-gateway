@@ -6,7 +6,7 @@ import {
     QRCodeStyled,
     WalletsContainerStyled
 } from './style';
-import { ConnectAdditionalRequest } from '@tonconnect/sdk';
+import { ConnectAdditionalRequest } from '@ion-gateway/sdk';
 import { appState } from 'src/app/state/app.state';
 import { setLastSelectedWalletInfo } from 'src/app/state/modals-state';
 import { FourWalletsItem, H1, WalletLabeledItem } from 'src/app/components';
@@ -66,7 +66,7 @@ export const DesktopUniversalModal: Component<DesktopUniversalModalProps> = prop
             <QRCodeStyled
                 sourceUrl={addReturnStrategy(request()!, 'none')}
                 disableCopy={popupOpened()}
-                imageUrl={IMG.TON}
+                imageUrl={IMG.ION}
             />
             <H2AvailableWalletsStyled translationKey="walletModal.desktopUniversalModal.availableWallets">
                 Available wallets

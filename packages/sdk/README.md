@@ -1,21 +1,21 @@
-# TON Connect SDK
+# ION Gateway SDK
 
-Use it to connect your app to TON wallets via TonConnect protocol. 
-You can find more details and the protocol specification in the [docs](https://docs.ton.org/develop/dapps/ton-connect/overview).
-See the example of sdk usage [here](https://github.com/ton-connect/demo-dapp).
+Use it to connect your app to ION wallets via TonConnect protocol. 
+You can find more details and the protocol specification in the [docs](https://docs.ton.org/develop/dapps/ion-gateway/overview).
+See the example of sdk usage [here](https://github.com/ion-gateway/demo-dapp).
 
-[Latest API documentation](https://ton-connect.github.io/sdk/modules/_tonconnect_sdk.html)
+[Latest API documentation](https://ion-gateway.github.io/sdk/modules/_ionconnect_sdk.html)
 
 # Getting started
 ## Installation with cdn
 Add the script to your HTML file:
 ```html
-<script src="https://unpkg.com/@tonconnect/sdk@latest/dist/tonconnect-sdk.min.js"></script>
+<script src="https://unpkg.com/@ion-gateway/sdk@latest/dist/ionconnect-sdk.min.js"></script>
 ```
 
 ℹ️ If you don't want auto-update the library, pass concrete version instead of `latest`, e.g. 
 ```html
-<script src="https://unpkg.com/@tonconnect/sdk@0.0.34/dist/tonconnect-sdk.min.js"></script>
+<script src="https://unpkg.com/@ion-gateway/sdk@0.0.34/dist/ionconnect-sdk.min.js"></script>
 ```
 
 You can find `TonConnect` in global variable `TonConnectSDK`, e.g.
@@ -26,21 +26,21 @@ You can find `TonConnect` in global variable `TonConnectSDK`, e.g.
 ```
 
 ## Installation with npm
-`npm i @tonconnect/sdk`
+`npm i @ion-gateway/sdk`
 
 # Usage
 ## Init connector and call restoreConnection. If user connected his wallet before, connector will restore the connection
 
 ```ts
-import TonConnect from '@tonconnect/sdk';
+import TonConnect from '@ion-gateway/sdk';
 
 const connector = new TonConnect();
 
 connector.restoreConnection();
 ```
 
-## Add the tonconnect-manifest
-App needs to have its manifest to pass meta information to the wallet. Manifest is a JSON file named as `tonconnect-manifest.json` following format:
+## Add the ionconnect-manifest
+App needs to have its manifest to pass meta information to the wallet. Manifest is a JSON file named as `ionconnect-manifest.json` following format:
 
 ```json
 {
@@ -52,15 +52,15 @@ App needs to have its manifest to pass meta information to the wallet. Manifest 
 }
 ```
 
-Best practice is to place the manifest in the root of your app, e.g. `https://myapp.com/tonconnect-manifest.json`. It allows the wallet to handle your app better and improve the UX connected to your app.
+Best practice is to place the manifest in the root of your app, e.g. `https://myapp.com/ionconnect-manifest.json`. It allows the wallet to handle your app better and improve the UX connected to your app.
 Make sure that manifest is available to GET by its URL.
 
-[See details](https://docs.ton.org/develop/dapps/ton-connect/protocol/requests-responses#app-manifest)
+[See details](https://docs.ton.org/develop/dapps/ion-gateway/protocol/requests-responses#app-manifest)
 
 If your manifest placed not in the root of your app, you can specify its path:
 ```ts
 const connector = new TonConnect({
-    manifestUrl: 'https://myApp.com/assets/tonconnect-manifest.json'
+    manifestUrl: 'https://myApp.com/assets/ionconnect-manifest.json'
 });
 ```
 
@@ -113,7 +113,7 @@ import {
     isWalletInfoCurrentlyInjected,
     isWalletInfoRemote,
     WalletInfo
-} from '@tonconnect/sdk';
+} from '@ion-gateway/sdk';
 
 /* Use for filtration */
 const remoteConnectionWalletInfos = walletInfoList.filter(isWalletInfoRemote);
@@ -149,7 +149,7 @@ if (isWalletInfoCurrentlyInjected(walletInfo)) {
 ```ts
 // Should correspond to the wallet that user selects
 const walletConnectionSource = {
-    universalLink: 'https://app.tonkeeper.com/ton-connect',
+    universalLink: 'https://app.tonkeeper.com/ion-gateway',
     bridgeUrl: 'https://bridge.tonapi.io/bridge'
 }
 
@@ -177,10 +177,10 @@ If several wallets have same bridge url, you can pass this url only once.
 ```ts
 const sources = [
     {
-        bridgeUrl: 'https://bridge.tonapi.io/bridge' // Tonkeeper
+        bridgeUrl: 'https://bridge.tonapi.io/bridge' // ION Wallet
     },
     {
-        bridgeUrl: 'https://<OTHER_WALLET_BRIDGE>' // Tonkeeper
+        bridgeUrl: 'https://<OTHER_WALLET_BRIDGE>' // ION Wallet
     }
 ];
 
@@ -193,7 +193,7 @@ You should detect working environment of the app and show appropriate UI.
 Check `embedded` property in elements of the wallets list to detect if the app is opened inside a wallet.
 
 ```ts
-import { isWalletInfoCurrentlyEmbedded, WalletInfoCurrentlyEmbedded } from '@tonconnect/sdk';
+import { isWalletInfoCurrentlyEmbedded, WalletInfoCurrentlyEmbedded } from '@ion-gateway/sdk';
 
 // "connect button" click handler.
 // Execute this before show wallet selection modal.
@@ -263,7 +263,7 @@ parameter to make it 'testnet only' (disabled by default).
 
 
 ```ts
-import { toUserFriendlyAddress } from '@tonconnect/sdk';
+import { toUserFriendlyAddress } from '@ion-gateway/sdk';
 
 const rawAddress = connector.wallet.account.address; // like '0:abcdef123456789...'
 const bouncableUserFriendlyAddress = toUserFriendlyAddress(rawAddress);
@@ -305,24 +305,24 @@ connector.onStatusChange(wallet => {
 4. Send proof and user's account data to your backend. Backend should check the proof correctness and check that payload inside the proof was generated before. After all checks backend should return an auth token to the client. Notice that `Account` contains the `walletStateInit` property which can be helpful for your backend to get user's public key if user's wallet contract doesn't support corresponding get method.
 5. Client saves the auth token in the `localStorage` and use it to access to auth-required endpoints. Client should delete the token when user disconnects the wallet.
 
-[See an example of a dapp using backend authorization](https://github.com/ton-connect/demo-dapp-with-backend). 
+[See an example of a dapp using backend authorization](https://github.com/ion-gateway/demo-dapp-with-backend). 
 
-[See an example of the dapp backend](https://github.com/ton-connect/demo-dapp-backend). 
+[See an example of the dapp backend](https://github.com/ion-gateway/demo-dapp-backend). 
 
 
 # Use with NodeJS
 You can use the SDK in frontend apps and in backend apps created with NodeJS. 
 
 ## Installation
-`npm i @tonconnect/sdk`
+`npm i @ion-gateway/sdk`
 
 ## Init connector
 When you use the SDK in backend, you have to pass `manifestUrl` and `IStorage` implementation to the TonConnect constructor.
 
-[See more about the manifest](##add-the-tonconnect-manifest).
+[See more about the manifest](##add-the-ionconnect-manifest).
 
 ```ts
-import TonConnect from '@tonconnect/sdk';
+import TonConnect from '@ion-gateway/sdk';
 
 const storage: IStorage = <your implementation of the IStorage>
 
@@ -338,7 +338,7 @@ export interface IStorage {
 }
 ```
 
-[See details about IStorage in the API documentation](https://ton-connect.github.io/sdk/interfaces/_tonconnect_sdk.IStorage.html).
+[See details about IStorage in the API documentation](https://ion-gateway.github.io/sdk/interfaces/_ionconnect_sdk.IStorage.html).
 
 Other steps are the same as for browser apps.
 
@@ -375,10 +375,10 @@ List of events:
 * `transaction-signed`: when a user successfully signs a transaction.
 * `transaction-signing-failed`: when a user cancels transaction signing or there is an error during the signing process.
 
-If you want to track user actions, you can subscribe to the window events with prefix `ton-connect-`:
+If you want to track user actions, you can subscribe to the window events with prefix `ion-gateway-`:
 
 ```typescript
-window.addEventListener('ton-connect-transaction-sent-for-signature', (event) => {
+window.addEventListener('ion-gateway-transaction-sent-for-signature', (event) => {
     console.log('Transaction init', event.detail);
 });
 ```
@@ -388,7 +388,7 @@ window.addEventListener('ton-connect-transaction-sent-for-signature', (event) =>
 You can use your custom event dispatcher to track user actions. To do this, you need to pass the `eventDispatcher` to the TonConnect constructor:
 
 ```typescript
-import {TonConnect, EventDispatcher, SdkActionEvent} from '@tonconnect/sdk';
+import {TonConnect, EventDispatcher, SdkActionEvent} from '@ion-gateway/sdk';
 
 class CustomEventDispatcher implements EventDispatcher<SdkActionEvent> {
     public async dispatchEvent(
@@ -417,13 +417,13 @@ Module not found: Can't resolve 'encoding' in '.../node_modules/node-fetch/lib'
 
 Import trace for requested module:
 ./node_modules/node-fetch/lib/index.js
-./node_modules/@tonconnect/isomorphic-fetch/index.mjs
-./node_modules/@tonconnect/sdk/lib/esm/index.mjs
+./node_modules/@ion-gateway/isomorphic-fetch/index.mjs
+./node_modules/@ion-gateway/sdk/lib/esm/index.mjs
 ```
 
 Please note that this is just a warning and should not affect the functionality of your application. If you wish to suppress the warning, you have two options:
 
-1. (Recommended) Wait for us to remove the dependency on `@tonconnect/isomorphic-fetch` in future releases. This dependency will be removed when we drop support for Node.js versions below 18.
+1. (Recommended) Wait for us to remove the dependency on `@ion-gateway/isomorphic-fetch` in future releases. This dependency will be removed when we drop support for Node.js versions below 18.
 
 2. (Optional) Install the `encoding` package, to resolve the warning:
 ```shell

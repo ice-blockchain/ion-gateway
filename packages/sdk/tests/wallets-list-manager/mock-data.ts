@@ -2,11 +2,11 @@ export const defaultWalletsList = {
     source: [
         {
             app_name: 'tonkeeper',
-            name: 'Tonkeeper',
-            image: 'https://tonkeeper.com/assets/tonconnect-icon.png',
+            name: 'ION Wallet',
+            image: 'https://tonkeeper.com/assets/ionconnect-icon.png',
             tondns: 'tonkeeper.ton',
             about_url: 'https://tonkeeper.com',
-            universal_url: 'https://app.tonkeeper.com/ton-connect',
+            universal_url: 'https://app.tonkeeper.com/ion-gateway',
             bridge: [
                 {
                     type: 'sse',
@@ -20,14 +20,14 @@ export const defaultWalletsList = {
             platforms: ['ios', 'android', 'chrome', 'firefox']
         },
         {
-            app_name: 'openmask',
-            name: 'OpenMask',
-            image: 'https://raw.githubusercontent.com/OpenProduct/openmask-extension/main/public/openmask-logo-288.png',
-            about_url: 'https://www.openmask.app/',
+            app_name: 'ionmask',
+            name: 'ION Wallet',
+            image: 'https://raw.githubusercontent.com/ice-blockchain/ion-chrome-wallet/refs/heads/ion-mainnet/public/ion-logo128.png',
+            about_url: 'https://ice.io/',
             bridge: [
                 {
                     type: 'js',
-                    key: 'openmask'
+                    key: 'ionmask'
                 }
             ],
             platforms: ['chrome']
@@ -45,7 +45,7 @@ export const defaultWalletsList = {
                 },
                 {
                     type: 'sse',
-                    url: 'https://tonconnectbridge.mytonwallet.org/bridge/'
+                    url: 'https://ionconnectbridge.mytonwallet.org/bridge/'
                 }
             ],
             platforms: ['chrome', 'windows', 'macos', 'linux']
@@ -53,9 +53,9 @@ export const defaultWalletsList = {
         {
             app_name: 'tonhub',
             name: 'Tonhub',
-            image: 'https://tonhub.com/tonconnect_logo.png',
+            image: 'https://tonhub.com/ionconnect_logo.png',
             about_url: 'https://tonhub.com',
-            universal_url: 'https://tonhub.com/ton-connect',
+            universal_url: 'https://tonhub.com/ion-gateway',
             bridge: [
                 {
                     type: 'js',
@@ -63,7 +63,7 @@ export const defaultWalletsList = {
                 },
                 {
                     type: 'sse',
-                    url: 'https://connect.tonhubapi.com/tonconnect'
+                    url: 'https://connect.tonhubapi.com/ionconnect'
                 }
             ],
             platforms: ['ios', 'android']
@@ -96,7 +96,7 @@ export const defaultWalletsList = {
         },
         {
             app_name: 'xtonwallet',
-            name: 'XTONWallet',
+            name: 'XIONWallet',
             image: 'https://xtonwallet.com/assets/img/icon-256-back.png',
             about_url: 'https://xtonwallet.com',
             bridge: [
@@ -109,7 +109,7 @@ export const defaultWalletsList = {
         },
         {
             app_name: 'tonwallet',
-            name: 'TON Wallet',
+            name: 'ION Wallet',
             image: 'https://wallet.ton.org/assets/ui/qr-logo.png',
             about_url:
                 'https://chrome.google.com/webstore/detail/ton-wallet/nphplpgoakhhjchkkhmiggakijnkhfnd',
@@ -124,20 +124,20 @@ export const defaultWalletsList = {
     ],
     parsed: [
         {
-            name: 'Tonkeeper',
+            name: 'ION Wallet',
             appName: 'tonkeeper',
-            imageUrl: 'https://tonkeeper.com/assets/tonconnect-icon.png',
+            imageUrl: 'https://tonkeeper.com/assets/ionconnect-icon.png',
             aboutUrl: 'https://tonkeeper.com',
             tondns: 'tonkeeper.ton',
             platforms: ['ios', 'android', 'chrome', 'firefox'],
             bridgeUrl: 'https://bridge.tonapi.io/bridge',
-            universalLink: 'https://app.tonkeeper.com/ton-connect',
+            universalLink: 'https://app.tonkeeper.com/ion-gateway',
             jsBridgeKey: 'tonkeeper',
             injected: false,
             embedded: false
         },
         {
-            name: 'OpenMask',
+            name: 'ION Wallet',
             appName: 'openmask',
             imageUrl:
                 'https://raw.githubusercontent.com/OpenProduct/openmask-extension/main/public/openmask-logo-288.png',
@@ -156,20 +156,20 @@ export const defaultWalletsList = {
             jsBridgeKey: 'mytonwallet',
             injected: false,
             embedded: false,
-            bridgeUrl: 'https://tonconnectbridge.mytonwallet.org/bridge/',
+            bridgeUrl: 'https://ionconnectbridge.mytonwallet.org/bridge/',
             universalLink: 'https://connect.mytonwallet.org'
         },
         {
             name: 'Tonhub',
             appName: 'tonhub',
-            imageUrl: 'https://tonhub.com/tonconnect_logo.png',
+            imageUrl: 'https://tonhub.com/ionconnect_logo.png',
             aboutUrl: 'https://tonhub.com',
             platforms: ['ios', 'android'],
             jsBridgeKey: 'tonhub',
             injected: false,
             embedded: false,
-            bridgeUrl: 'https://connect.tonhubapi.com/tonconnect',
-            universalLink: 'https://tonhub.com/ton-connect'
+            bridgeUrl: 'https://connect.tonhubapi.com/ionconnect',
+            universalLink: 'https://tonhub.com/ion-gateway'
         },
         {
             name: 'TonFlow',
@@ -192,7 +192,7 @@ export const defaultWalletsList = {
             embedded: false
         },
         {
-            name: 'XTONWallet',
+            name: 'XIONWallet',
             appName: 'xtonwallet',
             imageUrl: 'https://xtonwallet.com/assets/img/icon-256-back.png',
             aboutUrl: 'https://xtonwallet.com',
@@ -202,7 +202,7 @@ export const defaultWalletsList = {
             embedded: false
         },
         {
-            name: 'TON Wallet',
+            name: 'ION Wallet',
             appName: 'tonwallet',
             imageUrl: 'https://wallet.ton.org/assets/ui/qr-logo.png',
             aboutUrl:
@@ -219,11 +219,11 @@ export const walletsListWithWrongWallet = {
     source: [
         {
             app_name: 'tonkeeper',
-            name: 'Tonkeeper',
-            image: 'https://tonkeeper.com/assets/tonconnect-icon.png',
+            name: 'ION Wallet',
+            image: 'https://tonkeeper.com/assets/ionconnect-icon.png',
             tondns: 'tonkeeper.ton',
             about_url: 'https://tonkeeper.com',
-            universal_url: 'https://app.tonkeeper.com/ton-connect',
+            universal_url: 'https://app.tonkeeper.com/ion-gateway',
             bridge: [
                 {
                     type: 'sse',
@@ -237,14 +237,14 @@ export const walletsListWithWrongWallet = {
             platforms: ['ios', 'android', 'chrome', 'firefox']
         },
         {
-            app_name: 'openmask',
-            name: 'OpenMask',
-            image: 'https://raw.githubusercontent.com/OpenProduct/openmask-extension/main/public/openmask-logo-288.png',
-            about_url: 'https://www.openmask.app/',
+            app_name: 'ionmask',
+            name: 'ION Wallet',
+            image: 'https://raw.githubusercontent.com/ice-blockchain/ion-chrome-wallet/refs/heads/ion-mainnet/public/ion-logo128.png',
+            about_url: 'https://ice.io/',
             bridge: [
                 {
                     type: 'js',
-                    key: 'openmask'
+                    key: 'ionmask'
                 }
             ],
             platforms: ['chrome']
@@ -262,7 +262,7 @@ export const walletsListWithWrongWallet = {
                 },
                 {
                     type: 'sse',
-                    url: 'https://tonconnectbridge.mytonwallet.org/bridge/'
+                    url: 'https://ionconnectbridge.mytonwallet.org/bridge/'
                 }
             ],
             platforms: ['chrome', 'windows', 'macos', 'linux']
@@ -270,7 +270,7 @@ export const walletsListWithWrongWallet = {
         {
             app_name: 'tonhub',
             name: 'Tonhub',
-            image: 'https://tonhub.com/tonconnect_logo.png',
+            image: 'https://tonhub.com/ionconnect_logo.png',
             about_url: 'https://tonhub.com',
             bridge: [
                 {
@@ -279,7 +279,7 @@ export const walletsListWithWrongWallet = {
                 },
                 {
                     type: 'sse',
-                    url: 'https://connect.tonhubapi.com/tonconnect'
+                    url: 'https://connect.tonhubapi.com/ionconnect'
                 }
             ],
             platforms: ['ios', 'android']
@@ -311,20 +311,20 @@ export const walletsListWithWrongWallet = {
     ],
     parsed: [
         {
-            name: 'Tonkeeper',
+            name: 'ION Wallet',
             appName: 'tonkeeper',
-            imageUrl: 'https://tonkeeper.com/assets/tonconnect-icon.png',
+            imageUrl: 'https://tonkeeper.com/assets/ionconnect-icon.png',
             aboutUrl: 'https://tonkeeper.com',
             tondns: 'tonkeeper.ton',
             platforms: ['ios', 'android', 'chrome', 'firefox'],
             bridgeUrl: 'https://bridge.tonapi.io/bridge',
-            universalLink: 'https://app.tonkeeper.com/ton-connect',
+            universalLink: 'https://app.tonkeeper.com/ion-gateway',
             jsBridgeKey: 'tonkeeper',
             injected: false,
             embedded: false
         },
         {
-            name: 'OpenMask',
+            name: 'ION Wallet',
             appName: 'openmask',
             imageUrl:
                 'https://raw.githubusercontent.com/OpenProduct/openmask-extension/main/public/openmask-logo-288.png',
@@ -343,7 +343,7 @@ export const walletsListWithWrongWallet = {
             jsBridgeKey: 'mytonwallet',
             injected: false,
             embedded: false,
-            bridgeUrl: 'https://tonconnectbridge.mytonwallet.org/bridge/',
+            bridgeUrl: 'https://ionconnectbridge.mytonwallet.org/bridge/',
             universalLink: 'https://connect.mytonwallet.org'
         }
     ]
