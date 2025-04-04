@@ -6,8 +6,8 @@ export type {
     TonConnectUiOptionsWithManifest,
     TonConnectUiOptionsWithConnector,
     TonConnectUiCreateOptionsBase
-} from './ton-connect-ui-create-options';
-export type { TonConnectUiOptions } from './ton-connect-ui-options';
+} from './ion-gateway-ui-create-options';
+export type { TonConnectUiOptions } from './ion-gateway-ui-options';
 export type { WalletsListConfiguration } from './wallets-list-configuration';
 export type { UIPreferences } from './ui-preferences';
 export type { ColorsSet, PartialColorsSet } from './colors-set';

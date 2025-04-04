@@ -27,7 +27,7 @@ export default defineConfig({
     },
     define: {
         'process.env': {},
-        TON_CONNECT_UI_VERSION: JSON.stringify(version)
+        ION_CONNECT_UI_VERSION: JSON.stringify(version)
     },
     build: {
         target: 'es6',
@@ -38,7 +38,7 @@ export default defineConfig({
         lib: {
             formats: ['es', 'cjs'],
             entry: path.resolve('src/index.ts'),
-            name: 'TON_CONNECT_UI',
+            name: 'ION_CONNECT_UI',
             fileName: format => {
                 switch (format) {
                     case 'es':
@@ -51,10 +51,10 @@ export default defineConfig({
             }
         },
         rollupOptions: {
-            external: ['classnames', 'deepmerge', '@tonconnect/sdk', 'ua-parser-js'],
+            external: ['classnames', 'deepmerge', '@ion-gateway/sdk', 'ua-parser-js'],
             output: {
                 globals: {
-                    '@tonconnect/sdk': 'TonConnectSDK',
+                    '@ion-gateway/sdk': 'TonConnectSDK',
                     deepmerge: 'deepmerge',
                     classnames: 'classNames',
                     'ua-parser-js': 'UAParser'

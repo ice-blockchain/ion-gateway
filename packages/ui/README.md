@@ -1,64 +1,64 @@
-# TON Connect UI
+# ION Gateway UI
 
-TonConnect UI is a UI kit for TonConnect SDK. Use it to connect your app to TON wallets via TonConnect protocol.
+TonConnect UI is a UI kit for TonConnect SDK. Use it to connect your app to ION wallets via TonConnect protocol.
 
-If you use React for your dapp, take a look at [TonConnect UI React kit](https://github.com/ton-connect/sdk/tree/main/packages/ui-react).
+If you use React for your dapp, take a look at [TonConnect UI React kit](https://github.com/ion-gateway/sdk/tree/main/packages/ui-react).
 
-If you want to use TonConnect on the server side, you should use the [TonConnect SDK](https://github.com/ton-connect/sdk/tree/main/packages/sdk).
+If you want to use TonConnect on the server side, you should use the [TonConnect SDK](https://github.com/ion-gateway/sdk/tree/main/packages/sdk).
 
-You can find more details and the protocol specification in the [docs](https://docs.ton.org/develop/dapps/ton-connect/overview).
+You can find more details and the protocol specification in the [docs](https://docs.ton.org/develop/dapps/ion-gateway/overview).
 
 ---
 
-[Latest API documentation](https://ton-connect.github.io/sdk/modules/_tonconnect_ui.html)
+[Latest API documentation](https://ion-gateway.github.io/sdk/modules/_ionconnect_ui.html)
 
 # Getting started
 
 ## Installation with cdn
 Add the script to your HTML file:
 ```html
-<script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
+<script src="https://unpkg.com/@ion-gateway/ui@latest/dist/ionconnect-ui.min.js"></script>
 ```
 
 ℹ️ If you don't want auto-update the library, pass concrete version instead of `latest`, e.g.
 ```html
-<script src="https://unpkg.com/@tonconnect/ui@0.0.9/dist/tonconnect-ui.min.js"></script>
+<script src="https://unpkg.com/@ion-gateway/ui@0.0.9/dist/ionconnect-ui.min.js"></script>
 ```
 
-You can find `TonConnectUI` in global variable `TON_CONNECT_UI`, e.g.
+You can find `TonConnectUI` in global variable `ION_CONNECT_UI`, e.g.
 ```html
 <script>
-    const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
-        manifestUrl: 'https://<YOUR_APP_URL>/tonconnect-manifest.json',
-        buttonRootId: '<YOUR_CONNECT_BUTTON_ANCHOR_ID>'
+    const tonConnectUI = new ION_CONNECT_UI.TonConnectUI({
+        manifestUrl: 'https://<YOUR_APP_URL>/ionconnect-manifest.json',
+        buttonRootId: '<YOUR_CONNECT_BUTION_ANCHOR_ID>'
     });
 </script>
 ```
 
 
 ## Installation with npm
-`npm i @tonconnect/ui`
+`npm i @ion-gateway/ui`
 
 # Usage
 
 ## Create TonConnectUI instance
 ```ts
-import { TonConnectUI } from '@tonconnect/ui'
+import { TonConnectUI } from '@ion-gateway/ui'
 
 const tonConnectUI = new TonConnectUI({
-    manifestUrl: 'https://<YOUR_APP_URL>/tonconnect-manifest.json',
-    buttonRootId: '<YOUR_CONNECT_BUTTON_ANCHOR_ID>'
+    manifestUrl: 'https://<YOUR_APP_URL>/ionconnect-manifest.json',
+    buttonRootId: '<YOUR_CONNECT_BUTION_ANCHOR_ID>'
 });
 ```
 
 You can also specify required wallet features to filter wallets that will be shown in the connect wallet modal:
 
 ```ts
-import { TonConnectUI } from '@tonconnect/ui'
+import { TonConnectUI } from '@ion-gateway/ui'
 
 const tonConnectUI = new TonConnectUI({
-    manifestUrl: 'https://<YOUR_APP_URL>/tonconnect-manifest.json',
-    buttonRootId: '<YOUR_CONNECT_BUTTON_ANCHOR_ID>',
+    manifestUrl: 'https://<YOUR_APP_URL>/ionconnect-manifest.json',
+    buttonRootId: '<YOUR_CONNECT_BUTION_ANCHOR_ID>',
     walletsRequiredFeatures: {
         sendTransaction: {
             minMessages: 2, // Wallet must support at least 2 messages
@@ -72,9 +72,9 @@ This will filter out wallets that don't support sending multiple messages or don
 
 See all available options:
 
-[TonConnectUiOptionsWithManifest](https://ton-connect.github.io/sdk/interfaces/_tonconnect_ui.TonConnectUiOptionsWithManifest.html)
+[TonConnectUiOptionsWithManifest](https://ion-gateway.github.io/sdk/interfaces/_ionconnect_ui.TonConnectUiOptionsWithManifest.html)
 
-[TonConnectUiOptionsWithConnector](https://ton-connect.github.io/sdk/interfaces/_tonconnect_ui.TonConnectUiOptionsWithConnector.html)
+[TonConnectUiOptionsWithConnector](https://ion-gateway.github.io/sdk/interfaces/_ionconnect_ui.TonConnectUiOptionsWithConnector.html)
 
 ## Change options if needed 
 ```ts
@@ -94,7 +94,7 @@ DON'T do this:
 /* WRONG, WILL NOT WORK */ tonConnectUI.uiOptions.language = 'ru'; 
 ```
 
-[See all available options](https://ton-connect.github.io/sdk/interfaces/_tonconnect_ui.TonConnectUiOptions.html)
+[See all available options](https://ion-gateway.github.io/sdk/interfaces/_ionconnect_ui.TonConnectUiOptions.html)
 
 ## Fetch wallets list
 ```ts
@@ -482,18 +482,18 @@ tonConnectUI.connectionRestored.then(restored => {
 TonConnect UI provides an interface that should be familiar and recognizable to the user when using various apps. 
 However, the app developer can make changes to this interface to keep it consistent with the app interface.
 
-### Customise UI using tonconnectUI.uiOptions
-All such updates are reactive -- change `tonconnectUI.uiOptions` and changes will be applied immediately.  
+### Customise UI using ionconnectUI.uiOptions
+All such updates are reactive -- change `ionconnectUI.uiOptions` and changes will be applied immediately.  
 
-[See all available options](https://ton-connect.github.io/sdk/interfaces/_tonconnect_ui.UIPreferences.html)
+[See all available options](https://ion-gateway.github.io/sdk/interfaces/_ionconnect_ui.UIPreferences.html)
 
 #### Change border radius
-There are three border-radius modes: `'m'`, `'s'` and `'none'`. Default is `'m'`. You can change it via tonconnectUI.uiOptions, or set on tonConnectUI creating:
+There are three border-radius modes: `'m'`, `'s'` and `'none'`. Default is `'m'`. You can change it via ionconnectUI.uiOptions, or set on tonConnectUI creating:
 
 ```ts
 /* Pass to the constructor */
 const tonConnectUI = new TonConnectUI({
-    manifestUrl: 'https://<YOUR_APP_URL>/tonconnect-manifest.json',
+    manifestUrl: 'https://<YOUR_APP_URL>/ionconnect-manifest.json',
     uiPreferences: {
         borderRadius: 's'
     }
@@ -530,7 +530,7 @@ tonConnectUI.uiOptions = {
 You can set fixed theme: `'THEME.LIGHT'` or `'THEME.DARK'`, or use system theme. Default theme is system.
 
 ```ts
-import { THEME } from '@tonconnect/ui';
+import { THEME } from '@ion-gateway/ui';
 
 tonConnectUI.uiOptions = {
         uiPreferences: {
@@ -550,10 +550,10 @@ tonConnectUI.uiOptions = {
 
 You can set theme in the constructor if needed:
 ```ts
-import { THEME } from '@tonconnect/ui';
+import { THEME } from '@ion-gateway/ui';
 
 const tonConnectUI = new TonConnectUI({
-    manifestUrl: 'https://<YOUR_APP_URL>/tonconnect-manifest.json',
+    manifestUrl: 'https://<YOUR_APP_URL>/ionconnect-manifest.json',
     uiPreferences: {
         theme: THEME.DARK
     }
@@ -601,10 +601,10 @@ tonConnectUI.uiOptions = {
 
 You can set colors scheme in the constructor if needed:
 ```ts
-import { THEME } from '@tonconnect/ui';
+import { THEME } from '@ion-gateway/ui';
 
 const tonConnectUI = new TonConnectUI({
-    manifestUrl: 'https://<YOUR_APP_URL>/tonconnect-manifest.json',
+    manifestUrl: 'https://<YOUR_APP_URL>/ionconnect-manifest.json',
     uiPreferences: {
         colorsSet: {
             [THEME.DARK]: {
@@ -617,7 +617,7 @@ const tonConnectUI = new TonConnectUI({
 });
 ```
 
-[See all available options](https://ton-connect.github.io/sdk/interfaces/_tonconnect_ui.PartialColorsSet.html)
+[See all available options](https://ion-gateway.github.io/sdk/interfaces/_ionconnect_ui.PartialColorsSet.html)
 
 #### Combine options
 It is possible to change all required options at the same time:
@@ -700,7 +700,7 @@ Pass custom wallets array to extend the wallets list. Passed wallets will be add
 
 You can define custom wallet with `jsBridgeKey` (wallet = browser extension or there is a wallet dapp browser) or with `bridgeUrl` and `universalLink` pair (for http-connection compatible wallets), or pass all of these properties. 
 ```ts
-import { UIWallet } from '@tonconnect/ui';
+import { UIWallet } from '@ion-gateway/ui';
 
 const customWallet: UIWallet = {
     name: '<CUSTOM_WALLET_NAME>',
@@ -802,10 +802,10 @@ List of events:
 * `transaction-signed`: when a user successfully signs a transaction.
 * `transaction-signing-failed`: when a user cancels transaction signing or there is an error during the signing process.
 
-If you want to track user actions, you can subscribe to the window events with prefix `ton-connect-ui-`:
+If you want to track user actions, you can subscribe to the window events with prefix `ion-gateway-ui-`:
 
 ```typescript
-window.addEventListener('ton-connect-ui-transaction-sent-for-signature', (event) => {
+window.addEventListener('ion-gateway-ui-transaction-sent-for-signature', (event) => {
     console.log('Transaction init', event.detail);
 });
 ```
@@ -815,7 +815,7 @@ window.addEventListener('ton-connect-ui-transaction-sent-for-signature', (event)
 You can use your custom event dispatcher to track user actions. To do this, you need to pass the `eventDispatcher` to the TonConnect constructor:
 
 ```typescript
-import { TonConnectUI, EventDispatcher, SdkActionEvent, UserActionEvent } from '@tonconnect/ui';
+import { TonConnectUI, EventDispatcher, SdkActionEvent, UserActionEvent } from '@ion-gateway/ui';
 
 class CustomEventDispatcher implements EventDispatcher<UserActionEvent | SdkActionEvent> {
     public async dispatchEvent(
@@ -846,7 +846,7 @@ const tonConnectUI = new TonConnectUI({
 
 This will disable the custom back button behavior on Android, and you can then handle the back button press manually in your application.
 
-While we do not foresee any problems arising with the Android back handler, but if you find yourself needing to disable it due to an issue, please describe the problem in on [GitHub Issues](https://github.com/ton-connect/sdk/issues), so we can assist you further.
+While we do not foresee any problems arising with the Android back handler, but if you find yourself needing to disable it due to an issue, please describe the problem in on [GitHub Issues](https://github.com/ion-gateway/sdk/issues), so we can assist you further.
 
 ## Animations not working
 
@@ -886,14 +886,14 @@ Module not found: Can't resolve 'encoding' in '.../node_modules/node-fetch/lib'
 
 Import trace for requested module:
 ./node_modules/node-fetch/lib/index.js
-./node_modules/@tonconnect/isomorphic-fetch/index.mjs
-./node_modules/@tonconnect/sdk/lib/esm/index.mjs
-./node_modules/@tonconnect/ui/lib/esm/index.mjs
+./node_modules/@ion-gateway/isomorphic-fetch/index.mjs
+./node_modules/@ion-gateway/sdk/lib/esm/index.mjs
+./node_modules/@ion-gateway/ui/lib/esm/index.mjs
 ```
 
 Please note that this is just a warning and should not affect the functionality of your application. If you wish to suppress the warning, you have two options:
 
-1. (Recommended) Wait for us to remove the dependency on `@tonconnect/isomorphic-fetch` in future releases. This dependency will be removed when we drop support for Node.js versions below 18.
+1. (Recommended) Wait for us to remove the dependency on `@ion-gateway/isomorphic-fetch` in future releases. This dependency will be removed when we drop support for Node.js versions below 18.
 
 2. (Optional) Install the `encoding` package, to resolve the warning:
 ```shell

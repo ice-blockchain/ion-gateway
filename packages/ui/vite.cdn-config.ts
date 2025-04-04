@@ -18,7 +18,7 @@ export default defineConfig({
     },
     define: {
         'process.env': {},
-        TON_CONNECT_UI_VERSION: JSON.stringify(version)
+        ION_CONNECT_UI_VERSION: JSON.stringify(version)
     },
     build: {
         target: 'es6',
@@ -34,8 +34,8 @@ export default defineConfig({
         lib: {
             formats: ['umd'],
             entry: path.resolve('src/index.ts'),
-            name: 'TON_CONNECT_UI',
-            fileName: () => 'tonconnect-ui.min.js'
+            name: 'ION_CONNECT_UI',
+            fileName: () => 'ionconnect-ui.min.js'
         }
     }
 });

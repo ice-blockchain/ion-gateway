@@ -4,7 +4,7 @@ import {
     SendTransactionRpcRequest,
     SendTransactionRpcResponseError,
     SendTransactionRpcResponseSuccess
-} from '@tonconnect/protocol';
+} from '@ion-gateway/protocol';
 import { BadRequestError, TonConnectError, UnknownAppError, UserRejectsError } from 'src/errors';
 import { UnknownError } from 'src/errors/unknown.error';
 import { SendTransactionRequest, SendTransactionResponse } from 'src/models/methods';

@@ -1,22 +1,22 @@
 {
-  "name": "@tonconnect/protocol",
+  "name": "@ion-gateway/protocol",
   "version": "2.2.7",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ton-connect/sdk.git"
+    "url": "git+https://github.com/ion-gateway/sdk.git"
   },
-  "homepage": "https://github.com/ton-connect/sdk/tree/main/packages/protocol",
+  "homepage": "https://github.com/ice-blockchain/ion-gateway/tree/main/packages/protocol",
   "bugs": {
-    "url": "https://github.com/ton-connect/sdk/issues"
+    "url": "https://github.com/ice-blockchain/ion-gateway/issues"
   },
   "keywords": [
-    "TON",
+    "ION",
     "Wallet",
-    "ton-connect",
+    "ion-gateway",
     "Connect",
-    "Tonkeeper"
+    "ION Wallet"
   ],
-  "author": "tonconnect",
+  "author": "ionconnect",
   "license": "Apache-2.0",
   "scripts": {
     "build": "npx rimraf types-dist && npx rimraf lib && npx rollup -c rollup.config.mjs && tsc && api-extractor run && npx rimraf types-dist",
