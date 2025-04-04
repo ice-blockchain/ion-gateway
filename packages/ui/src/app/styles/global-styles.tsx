@@ -15,24 +15,24 @@ export const GlobalStyles = (): JSXElement => {
     });
 
     const Styles = createGlobalStyles`
-    tc-root > div > div > div > div {
+    ${globalStylesTag} > div > div > div > div {
     padding: 51px 36px;
 }
 
-tc-root > div > div > div:last-child {
+${globalStylesTag} > div > div > div:last-child {
     display: none;
 }
 
-tc-root > div > div ul {
+${globalStylesTag} > div > div ul {
     flex-direction: column;
     width: 100%;
 }
 
-tc-root ul > button:last-child {
+${globalStylesTag} ul > button:last-child {
     display: none !important;
 }
 
-tc-root ul button {
+${globalStylesTag} ul button {
     width: 100% !important;
     border-radius: 16px !important;;
     background: #F5F7FF !important;;
@@ -46,7 +46,7 @@ tc-root ul button {
     margin-bottom: 8px !important;;
 }
 
-tc-root ul button::after {
+${globalStylesTag} ul button::after {
     content: "";
     display: inline-block;
     width: 6px;
@@ -59,20 +59,20 @@ tc-root ul button::after {
     right: 16px;
 }
 
-tc-root ul button > div:first-child {
+${globalStylesTag} ul button > div:first-child {
     margin-right: 16px;
     width: 44px !important;
     height: 44px !important;
     margin-bottom: 0;
 }
 
-tc-root ul > button > div:first-child > div {
+${globalStylesTag} ul > button > div:first-child > div {
     width: 12px !important;
     height: 12px !important;
     border-radius: 3px !important;
 }
 
-tc-root h1:before {
+${globalStylesTag} h1:before {
     display: block;
     content: "";
     background: #0166FF;
@@ -83,7 +83,7 @@ tc-root h1:before {
     margin-bottom: 8px;
 }
 
-tc-root h1:after {
+${globalStylesTag} h1:after {
     display: block;
     content: "To continue, please connect your ION Wallet.";
     color: #494949;
@@ -96,7 +96,7 @@ tc-root h1:after {
     margin-bottom: 20px;
 }
 
-tc-root h1 {
+${globalStylesTag} h1 {
     margin-bottom: 8px;
     color: #0E0E0E;
     font-feature-settings: 'liga' off, 'clig' off;
@@ -105,6 +105,27 @@ tc-root h1 {
     font-weight: 600;
     line-height: normal;
 }
+
+${globalStylesTag} > div > div > div > div {
+    padding: 51px 36px !important;
+}
+
+${globalStylesTag} ul button > div:nth-child(2) {
+    color: #000;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+${globalStylesTag} ul button > div:nth-child(3) {
+    display: none;
+}
+
+${globalStylesTag} > div > div > div > div > div:nth-child(3) {
+    min-height: auto!important;
+}
+
 
     ${globalStylesTag} h2,${globalStylesTag} div > button,${globalStylesTag} div > svg {display: none !important;}
     ${globalStylesTag} * {
