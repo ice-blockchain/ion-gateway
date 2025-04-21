@@ -13,6 +13,7 @@ export const ActionsModal: Component = () => {
             enableAndroidBackHandler={appState.enableAndroidBackHandler}
             onClose={() => setAction(null)}
             data-tc-actions-modal-container="true"
+            class={`${action()!.name}-modal`}
         >
             <Switch>
                 <Match when={action()!.name === 'transaction-sent'}>
