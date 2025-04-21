@@ -1,5 +1,5 @@
 {
-  "name": "@tonconnect/ui-react",
+  "name": "@ion-gateway/ui-react",
   "version": "2.1.1-beta.0",
   "scripts": {
     "dev": "vite",
@@ -7,24 +7,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ton-connect/sdk.git"
+    "url": "git+https://github.com/ion-gateway/sdk.git"
   },
-  "homepage": "https://github.com/ton-connect/sdk/tree/main/packages/ui-react",
+  "homepage": "https://github.com/ion-gateway/sdk/tree/main/packages/ui-react",
   "bugs": {
-    "url": "https://github.com/ton-connect/sdk/issues"
+    "url": "https://github.com/ice-blockchain/ion-gateway/issues"
   },
   "keywords": [
-    "TON",
+    "ION",
     "Wallet",
-    "ton-connect",
-    "tonconnect",
+    "ion-gateway",
+    "ionconnect",
     "Connect",
-    "Tonkeeper",
+    "ION Wallet",
     "sdk",
     "UI",
     "React"
   ],
-  "author": "tonconnect",
+  "author": "ionconnect",
   "license": "Apache-2.0",
   "files": [
     "lib"
@@ -52,7 +52,7 @@
     "vite-plugin-dts": "^1.7.1"
   },
   "dependencies": {
-    "@tonconnect/ui": "2.1.1-beta.0"
+    "@ion-gateway/ui": "2.1.1-beta.0"
   },
   "peerDependencies": {
     "react": ">=17.0.0",

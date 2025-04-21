@@ -1,21 +1,21 @@
 {
-  "name": "@tonconnect/isomorphic-eventsource",
+  "name": "@ion-gateway/isomorphic-eventsource",
   "version": "0.0.2",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ton-connect/sdk.git"
+    "url": "git+https://github.com/ion-gateway/sdk.git"
   },
-  "homepage": "https://github.com/ton-connect/sdk/tree/main/packages/isomorphic-eventsource",
+  "homepage": "https://github.com/ion-gateway/sdk/tree/main/packages/isomorphic-eventsource",
   "bugs": {
-    "url": "https://github.com/ton-connect/sdk/issues"
+    "url": "https://github.com/ice-blockchain/ion-gateway/issues"
   },
   "keywords": [
-    "ton-connect",
+    "ion-gateway",
     "Connect",
     "EventSource",
     "Isomorphic"
   ],
-  "author": "tonconnect",
+  "author": "ionconnect",
   "license": "Apache-2.0",
   "scripts": {},
   "files": [

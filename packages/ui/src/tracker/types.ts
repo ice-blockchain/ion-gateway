@@ -4,7 +4,7 @@ import {
     DisconnectionEvent,
     TransactionSigningEvent,
     VersionEvent
-} from '@tonconnect/sdk';
+} from '@ion-gateway/sdk';
 
 /**
  * User action events.
@@ -29,4 +29,4 @@ export {
     createTransactionSentForSignatureEvent,
     createTransactionSigningFailedEvent,
     createTransactionSignedEvent
-} from '@tonconnect/sdk';
+} from '@ion-gateway/sdk';

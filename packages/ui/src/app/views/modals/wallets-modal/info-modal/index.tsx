@@ -27,7 +27,7 @@ interface InfoModalProps {
 
 export const InfoModal: Component<InfoModalProps> = props => {
     return (
-        <InfoModalStyled data-tc-wallets-modal-info="true">
+        <InfoModalStyled data-tc-wallets-modal-info="true" class="info-modal">
             <StyledIconButton icon="arrow" onClick={() => props.onBackClick()} />
             <H1Styled translationKey="walletModal.infoModal.whatIsAWallet">
                 What is a wallet
@@ -40,7 +40,7 @@ export const InfoModal: Component<InfoModalProps> = props => {
                         Secure digital assets storage
                     </H3Styled>
                     <TextStyled translationKey="walletModal.infoModal.walletProtects">
-                        A wallet protects and manages your digital assets including TON, tokens and
+                        A wallet protects and manages your digital assets including ION, tokens and
                         collectables.
                     </TextStyled>
                 </InfoBlock>

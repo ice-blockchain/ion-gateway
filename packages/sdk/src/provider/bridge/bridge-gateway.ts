@@ -1,11 +1,11 @@
-import { Base64, RpcMethod } from '@tonconnect/protocol';
-import { TonConnectError } from 'src/errors/ton-connect.error';
+import { Base64, RpcMethod } from '@ion-gateway/protocol';
+import { TonConnectError } from 'src/errors/ion-gateway.error';
 import { BridgeIncomingMessage } from 'src/provider/bridge/models/bridge-incomming-message';
 import { HttpBridgeGatewayStorage } from 'src/storage/http-bridge-gateway-storage';
 import { IStorage } from 'src/storage/models/storage.interface';
 import { addPathToUrl } from 'src/utils/url';
-import '@tonconnect/isomorphic-eventsource';
-import '@tonconnect/isomorphic-fetch';
+import '@ion-gateway/isomorphic-eventsource';
+import '@ion-gateway/isomorphic-fetch';
 import { callForSuccess } from 'src/utils/call-for-success';
 import { logDebug, logError } from 'src/utils/log';
 import { createResource } from 'src/utils/resource';

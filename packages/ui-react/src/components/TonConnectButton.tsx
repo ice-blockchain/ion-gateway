@@ -1,7 +1,7 @@
 import { CSSProperties, FunctionComponent, memo, useEffect } from 'react';
 import { useTonConnectUI } from '../hooks/useTonConnectUI';
 
-const buttonRootId = 'ton-connect-button';
+const buttonRootId = 'ion-gateway-button';
 
 export interface TonConnectButtonProps {
     className?: string;
