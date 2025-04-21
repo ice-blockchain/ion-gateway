@@ -43,7 +43,7 @@
     "loading": "Loading wallets",
     "wallets": "Wallets",
     "mobileUniversalModal": {
-      "connectYourWallet": "Connect your TON wallet",
+      "connectYourWallet": "Connect your ION wallet",
       "openWalletOnTelegramOrSelect": "Use Wallet in Telegram or choose other application",
       "openWalletOnTelegram": "Connect Wallet in Telegram",
       "chooseOtherApplication": "Choose other application",
@@ -51,7 +51,7 @@
       "scan": "Scan with your mobile wallet"
     },
     "desktopUniversalModal": {
-      "connectYourWallet": "Connect your TON wallet",
+      "connectYourWallet": "Connect your ION wallet",
       "scan": "Scan with your mobile wallet",
       "availableWallets": "Available wallets"
     },
@@ -81,7 +81,7 @@
     "infoModal": {
       "whatIsAWallet": "What is a wallet",
       "secureDigitalAssets": "Secure digital assets storage",
-      "walletProtects": "A wallet protects and manages your digital assets including TON, tokens and collectables.",
+      "walletProtects": "A wallet protects and manages your digital assets including ION, tokens and collectables.",
       "controlIdentity": "Control your Web3 identity",
       "manageIdentity": "Manage your digital identity and access decentralized applications with ease. Maintain control over your data and engage securely in the blockchain ecosystem.",
       "effortlessCryptoTransactions": "Effortless crypto transactions",

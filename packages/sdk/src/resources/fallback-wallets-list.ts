@@ -10,18 +10,18 @@ export const FALLBACK_WALLETS_LIST: WalletInfoDTO[] = [
         bridge: [
             {
                 type: 'sse',
-                url: 'https://walletbot.me/tonconnect-bridge/bridge'
+                url: 'https://walletbot.me/ionconnect-bridge/bridge'
             }
         ],
         platforms: ['ios', 'android', 'macos', 'windows', 'linux']
     },
     {
         app_name: 'tonkeeper',
-        name: 'Tonkeeper',
-        image: 'https://tonkeeper.com/assets/tonconnect-icon.png',
+        name: 'ION Wallet',
+        image: 'https://tonkeeper.com/assets/ionconnect-icon.png',
         tondns: 'tonkeeper.ton',
         about_url: 'https://tonkeeper.com',
-        universal_url: 'https://app.tonkeeper.com/ton-connect',
+        universal_url: 'https://app.tonkeeper.com/ion-gateway',
         deepLink: 'tonkeeper-tc://',
         bridge: [
             {
@@ -48,7 +48,7 @@ export const FALLBACK_WALLETS_LIST: WalletInfoDTO[] = [
             },
             {
                 type: 'sse',
-                url: 'https://tonconnectbridge.mytonwallet.org/bridge/'
+                url: 'https://ionconnectbridge.mytonwallet.org/bridge/'
             }
         ],
         platforms: ['chrome', 'windows', 'macos', 'linux', 'ios', 'android', 'firefox']
@@ -56,9 +56,9 @@ export const FALLBACK_WALLETS_LIST: WalletInfoDTO[] = [
     {
         app_name: 'tonhub',
         name: 'Tonhub',
-        image: 'https://tonhub.com/tonconnect_logo.png',
+        image: 'https://tonhub.com/ionconnect_logo.png',
         about_url: 'https://tonhub.com',
-        universal_url: 'https://tonhub.com/ton-connect',
+        universal_url: 'https://tonhub.com/ion-gateway',
         bridge: [
             {
                 type: 'js',
@@ -66,7 +66,7 @@ export const FALLBACK_WALLETS_LIST: WalletInfoDTO[] = [
             },
             {
                 type: 'sse',
-                url: 'https://connect.tonhubapi.com/tonconnect'
+                url: 'https://connect.tonhubapi.com/ionconnect'
             }
         ],
         platforms: ['ios', 'android']
@@ -84,11 +84,11 @@ export const FALLBACK_WALLETS_LIST: WalletInfoDTO[] = [
             },
             {
                 type: 'sse',
-                url: 'https://ton-connect-bridge.bgwapi.io/bridge'
+                url: 'https://ion-gateway-bridge.bgwapi.io/bridge'
             }
         ],
         platforms: ['ios', 'android', 'chrome'],
-        universal_url: 'https://bkcode.vip/ton-connect'
+        universal_url: 'https://bkcode.vip/ion-gateway'
     },
     {
         app_name: 'okxMiniWallet',
@@ -109,7 +109,7 @@ export const FALLBACK_WALLETS_LIST: WalletInfoDTO[] = [
         name: 'Binance Web3 Wallet',
         image: 'https://public.bnbstatic.com/static/binance-w3w/ton-provider/binancew3w.png',
         about_url: 'https://www.binance.com/en/web3wallet',
-        deepLink: 'bnc://app.binance.com/cedefi/ton-connect',
+        deepLink: 'bnc://app.binance.com/cedefi/ion-gateway',
         bridge: [
             {
                 type: 'js',
@@ -121,12 +121,12 @@ export const FALLBACK_WALLETS_LIST: WalletInfoDTO[] = [
             }
         ],
         platforms: ['ios', 'android', 'macos', 'windows', 'linux'],
-        universal_url: 'https://app.binance.com/cedefi/ton-connect'
+        universal_url: 'https://app.binance.com/cedefi/ion-gateway'
     },
     {
         app_name: 'fintopio-tg',
         name: 'Fintopio',
-        image: 'https://fintopio.com/tonconnect-icon.png',
+        image: 'https://fintopio.com/ionconnect-icon.png',
         about_url: 'https://fintopio.com',
         universal_url: 'https://t.me/fintopio?attach=wallet',
         bridge: [
@@ -143,7 +143,7 @@ export const FALLBACK_WALLETS_LIST: WalletInfoDTO[] = [
         image: 'https://static.okx.com/cdn/assets/imgs/247/58E63FEA47A2B7D7.png',
         about_url: 'https://www.okx.com/web3',
         universal_url:
-            'https://www.okx.com/download?appendQuery=true&deeplink=okx://web3/wallet/tonconnect',
+            'https://www.okx.com/download?appendQuery=true&deeplink=okx://web3/wallet/ionconnect',
         bridge: [
             {
                 type: 'js',
@@ -179,7 +179,7 @@ export const FALLBACK_WALLETS_LIST: WalletInfoDTO[] = [
         name: 'Bybit Wallet',
         image: 'https://raw.githubusercontent.com/bybit-web3/bybit-web3.github.io/main/docs/images/bybit-logo.png',
         about_url: 'https://www.bybit.com/web3',
-        universal_url: 'https://app.bybit.com/ton-connect',
+        universal_url: 'https://app.bybit.com/ion-gateway',
         deepLink: 'bybitapp://',
         bridge: [
             {
@@ -213,7 +213,7 @@ export const FALLBACK_WALLETS_LIST: WalletInfoDTO[] = [
         image: 'https://s.pvcliping.com/web/public_image/SafePal_x288.png',
         tondns: '',
         about_url: 'https://www.safepal.com',
-        universal_url: 'https://link.safepal.io/ton-connect',
+        universal_url: 'https://link.safepal.io/ion-gateway',
         deepLink: 'safepal-tc://',
         bridge: [
             {
@@ -246,14 +246,14 @@ export const FALLBACK_WALLETS_LIST: WalletInfoDTO[] = [
         universal_url: 'https://gateio.go.link/gateio/web3?adj_t=1ff8khdw_1fu4ccc7'
     },
     {
-        app_name: 'openmask',
-        name: 'OpenMask',
-        image: 'https://raw.githubusercontent.com/OpenProduct/openmask-extension/main/public/openmask-logo-288.png',
-        about_url: 'https://www.openmask.app/',
+        app_name: 'ionmask',
+        name: 'ION Wallet',
+        image: 'https://raw.githubusercontent.com/ice-blockchain/ion-chrome-wallet/refs/heads/ion-mainnet/public/ion-logo128.png',
+        about_url: 'https://ice.io/',
         bridge: [
             {
                 type: 'js',
-                key: 'openmask'
+                key: 'ionmask'
             }
         ],
         platforms: ['chrome']
@@ -267,7 +267,7 @@ export const FALLBACK_WALLETS_LIST: WalletInfoDTO[] = [
         bridge: [
             {
                 type: 'sse',
-                url: 'https://ton-connect-bridge.bgwapi.io/bridge'
+                url: 'https://ion-gateway-bridge.bgwapi.io/bridge'
             }
         ],
         platforms: ['ios', 'android', 'windows', 'macos', 'linux']
@@ -288,7 +288,7 @@ export const FALLBACK_WALLETS_LIST: WalletInfoDTO[] = [
     },
     {
         app_name: 'xtonwallet',
-        name: 'XTONWallet',
+        name: 'XIONWallet',
         image: 'https://xtonwallet.com/assets/img/icon-256-back.png',
         about_url: 'https://xtonwallet.com',
         bridge: [
@@ -301,7 +301,7 @@ export const FALLBACK_WALLETS_LIST: WalletInfoDTO[] = [
     },
     {
         app_name: 'tonwallet',
-        name: 'TON Wallet',
+        name: 'ION Wallet',
         image: 'https://wallet.ton.org/assets/ui/qr-logo.png',
         about_url:
             'https://chrome.google.com/webstore/detail/ton-wallet/nphplpgoakhhjchkkhmiggakijnkhfnd',

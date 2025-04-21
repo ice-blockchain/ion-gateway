@@ -1,4 +1,4 @@
-import { TonConnectError } from 'src/errors/ton-connect.error';
+import { TonConnectError } from 'src/errors/ion-gateway.error';
 
 /**
  * Thrown when wallet connection called but wallet already connected. To avoid the error, disconnect the wallet before doing a new connection.

@@ -1,4 +1,4 @@
-import { TonConnectError } from 'src/errors/ton-connect.error';
+import { TonConnectError } from 'src/errors/ion-gateway.error';
 
 /**
  * Thrown when passed address is in incorrect format.

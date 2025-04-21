@@ -1,4 +1,4 @@
-import { ConnectAdditionalRequest } from '@tonconnect/sdk';
+import { ConnectAdditionalRequest } from '@ion-gateway/sdk';
 import {
     Component,
     createEffect,
@@ -24,7 +24,7 @@ import { InfoModal } from 'src/app/views/modals/wallets-modal/info-modal';
 import { MobileConnectionModal } from 'src/app/views/modals/wallets-modal/mobile-connection-modal';
 import { Dynamic } from 'solid-js/web';
 import { WalletsModalCloseReason } from 'src/models';
-import { TonConnectUiContext } from 'src/app/state/ton-connect-ui.context';
+import { TonConnectUiContext } from 'src/app/state/ion-gateway-ui.context';
 
 export const SingleWalletModal: Component = () => {
     const { locale } = useI18n()[1];
@@ -74,7 +74,7 @@ export const SingleWalletModal: Component = () => {
             enableAndroidBackHandler={appState.enableAndroidBackHandler}
             onClose={() => onClose('action-cancelled')}
             onClickQuestion={() => setInfoTab(v => !v)}
-            data-tc-wallets-modal-container="true"
+            data-tc-wallets-modal-container="true" class="wallets-modal"
         >
             <Show when={infoTab()}>
                 <InfoModal onBackClick={() => setInfoTab(false)} />

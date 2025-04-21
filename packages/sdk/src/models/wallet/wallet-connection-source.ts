@@ -2,12 +2,12 @@ export type WalletConnectionSource = WalletConnectionSourceHTTP | WalletConnecti
 
 export interface WalletConnectionSourceHTTP {
     /**
-     * Base part of the wallet universal url. The link should support [Ton Connect parameters]{@link https://github.com/ton-connect/docs/blob/main/bridge.md#universal-link}.
+     * Base part of the wallet universal url. The link should support [Ton Connect parameters]{@link https://github.com/ion-gateway/docs/blob/main/bridge.md#universal-link}.
      */
     universalLink: string;
 
     /**
-     * Url of the wallet's implementation of the [HTTP bridge]{@link https://github.com/ton-connect/docs/blob/main/bridge.md#http-bridge}.
+     * Url of the wallet's implementation of the [HTTP bridge]{@link https://github.com/ion-gateway/docs/blob/main/bridge.md#http-bridge}.
      */
     bridgeUrl: string;
 }
