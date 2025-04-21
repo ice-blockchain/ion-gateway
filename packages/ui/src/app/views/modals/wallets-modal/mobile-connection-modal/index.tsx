@@ -154,7 +154,7 @@ export const MobileConnectionModal: Component<MobileConnectionProps> = props => 
     onRetry();
 
     return (
-        <MobileConnectionModalStyled data-tc-wallets-modal-connection-mobile="true">
+        <MobileConnectionModalStyled data-tc-wallets-modal-connection-mobile="true" class="mobile-connection-modal">
             <Show when={!props.backDisabled || showQR()}>
                 <StyledIconButton icon="arrow" onClick={onBack} />
             </Show>

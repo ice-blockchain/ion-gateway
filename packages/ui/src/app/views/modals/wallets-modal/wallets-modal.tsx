@@ -182,6 +182,7 @@ export const WalletsModal: Component = () => {
             onClose={() => onClose('action-cancelled')}
             onClickQuestion={() => setInfoTab(v => !v)}
             data-tc-wallets-modal-container="true"
+            class="wallets-modal"
         >
             <Show when={infoTab()}>
                 <InfoModal onBackClick={() => setInfoTab(false)} />

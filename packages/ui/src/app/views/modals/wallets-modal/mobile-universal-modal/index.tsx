@@ -150,7 +150,7 @@ export const MobileUniversalModal: Component<MobileUniversalModalProps> = props 
     );
 
     return (
-        <div data-tc-wallets-modal-universal-mobile="true">
+        <div data-tc-wallets-modal-universal-mobile="true" class="mobile-universal-modal">
             <Show when={showQR()}>
                 <StyledLeftActionButton icon="arrow" onClick={onCloseQR} />
                 <MobileUniversalQR
