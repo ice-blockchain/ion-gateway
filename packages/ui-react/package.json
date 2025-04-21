@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ion-gateway/sdk.git"
+    "url": "git+https://github.com/ice-blockchain/ion-gateway.git"
   },
   "homepage": "https://github.com/ion-gateway/sdk/tree/main/packages/ui-react",
   "bugs": {
