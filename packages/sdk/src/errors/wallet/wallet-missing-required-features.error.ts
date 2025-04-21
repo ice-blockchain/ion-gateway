@@ -1,5 +1,5 @@
-import { ConnectEventSuccess } from '@tonconnect/protocol';
-import { TonConnectError } from 'src/errors/ton-connect.error';
+import { ConnectEventSuccess } from '@ion-gateway/protocol';
+import { TonConnectError } from 'src/errors/ion-gateway.error';
 
 /**
  * Thrown when wallet can't get manifest by passed manifestUrl.

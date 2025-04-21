@@ -13,7 +13,7 @@ import {
     openLinkBlank,
     toDeeplink
 } from 'src/app/utils/web-api';
-import { encodeTelegramUrlParameters, isTelegramUrl } from '@tonconnect/sdk';
+import { encodeTelegramUrlParameters, isTelegramUrl } from '@ion-gateway/sdk';
 
 /**
  * Adds a return strategy to a url.
@@ -48,7 +48,7 @@ export function addReturnStrategy(
 
 /**
  * Redirects the user to a specified Telegram link with various strategies for returning to the application.
- * This function is primarily used for TON Space to handle different platforms and operating systems.
+ * This function is primarily used for ION Space to handle different platforms and operating systems.
  *
  * @param universalLink A string representing the universal link to redirect to within Telegram.
  * @param options An object containing specific properties to customize the redirect behavior:
@@ -73,7 +73,7 @@ export function redirectToTelegram(
     const directLinkUrl = new URL(directLink);
 
     if (!directLinkUrl.searchParams.has('startapp')) {
-        directLinkUrl.searchParams.append('startapp', 'tonconnect');
+        directLinkUrl.searchParams.append('startapp', 'ionconnect');
     }
 
     if (isInTelegramBrowser()) {
@@ -85,7 +85,7 @@ export function redirectToTelegram(
     } else if (isInTMA()) {
         if (isTmaPlatform('ios', 'android', 'macos', 'tdesktop', 'web')) {
             // Use the `back` strategy, the current TMA instance will keep open.
-            // TON Space should automatically open in stack and should close
+            // ION Space should automatically open in stack and should close
             // itself after the user action.
 
             options.returnStrategy = 'back';
@@ -220,7 +220,7 @@ export function redirectToTelegram(
                 openLinkBlank(linkWithStrategy);
             }
         } else if (isOS('macos', 'windows', 'linux')) {
-            // Use the `none` strategy. The user will transition to the TON Space
+            // Use the `none` strategy. The user will transition to the ION Space
             // and return to the TMA after the action is completed.
 
             options.returnStrategy = 'back';
@@ -248,7 +248,7 @@ export function redirectToTelegram(
 
 /**
  * Redirects the user to a specified wallet link with various strategies for returning to the application.
- * This function is primarily used for any wallet (except TON Space) to handle different platforms and operating systems.
+ * This function is primarily used for any wallet (except ION Space) to handle different platforms and operating systems.
  *
  * @param universalLink A string representing the universal link to redirect to within the wallet.
  * @param deepLink A string representing the deep link to redirect to within the wallet, or `undefined` if not applicable.

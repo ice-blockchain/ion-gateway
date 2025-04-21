@@ -4,7 +4,7 @@ import {
     RpcMethod,
     WalletEvent,
     WalletResponse
-} from '@tonconnect/protocol';
+} from '@ion-gateway/protocol';
 import { WithoutId, WithoutIdDistributive } from 'src/utils/types';
 
 export type Provider = InternalProvider | HTTPProvider;

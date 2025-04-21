@@ -5,8 +5,8 @@ import {
     TonConnectUI,
     UIPreferences,
     WalletsListConfiguration
-} from '@tonconnect/ui';
-import type { ITonConnect, RequiredFeatures } from '@tonconnect/ui';
+} from '@ion-gateway/ui';
+import type { ITonConnect, RequiredFeatures } from '@ion-gateway/ui';
 import { isClientSide } from '../utils/web';
 
 export const TonConnectUIContext = createContext<TonConnectUI | null>(null);
@@ -18,15 +18,15 @@ export type TonConnectUIProviderProps = {
 
 export interface TonConnectUIProviderPropsWithManifest {
     /**
-     * Url to the [manifest]{@link https://github.com/ton-connect/docs/blob/main/requests-responses.md#app-manifest} with the Dapp metadata that will be displayed in the user's wallet.
-     * If not passed, manifest from `${window.location.origin}/tonconnect-manifest.json` will be taken.
+     * Url to the [manifest]{@link https://github.com/ion-gateway/docs/blob/main/requests-responses.md#app-manifest} with the Dapp metadata that will be displayed in the user's wallet.
+     * If not passed, manifest from `${window.location.origin}/ionconnect-manifest.json` will be taken.
      */
     manifestUrl: string;
 }
 
 export interface TonConnectUIProviderPropsWithConnector {
     /**
-     * TonConnect instance. Can be helpful if you use custom ITonConnect implementation, or use both of @tonconnect/sdk and @tonconnect/ui in your app.
+     * TonConnect instance. Can be helpful if you use custom ITonConnect implementation, or use both of @ion-gateway/sdk and @ion-gateway/ui in your app.
      */
     connector: ITonConnect;
 }
