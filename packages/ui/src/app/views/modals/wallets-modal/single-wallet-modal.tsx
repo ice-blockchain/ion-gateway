@@ -74,8 +74,7 @@ export const SingleWalletModal: Component = () => {
             enableAndroidBackHandler={appState.enableAndroidBackHandler}
             onClose={() => onClose('action-cancelled')}
             onClickQuestion={() => setInfoTab(v => !v)}
-            data-tc-wallets-modal-container="true"
-            class="single-wallet-modal"
+            data-tc-wallets-modal-container="true" class="wallets-modal"
         >
             <Show when={infoTab()}>
                 <InfoModal onBackClick={() => setInfoTab(false)} />
