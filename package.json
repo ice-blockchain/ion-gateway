@@ -1,9 +1,15 @@
 {
-  "name": "ionconnect",
-  "version": "2.0.0",
+  "name": "ion-gateway",
+  "version": "2.0.1",
   "license": "MIT",
   "scripts": {
-    "generateDocs": "npx typedoc"
+    "generateDocs": "npx typedoc",
+    "publish:isomorphic-eventsource": "cd packages/isomorphic-eventsource && yarn install && npm publish --access=public",
+    "publish:isomorphic-fetch": "cd packages/isomorphic-fetch && yarn install && npm publish --access=public",
+    "publish:protocol": "cd packages/protocol && yarn install && yarn build && npm publish --access=public",
+    "publish:sdk": "cd packages/sdk && yarn install && yarn build && npm publish --access=public --tag=beta",
+    "publish:ui": "cd packages/ui && yarn install && yarn build && npm publish --access=public --tag=beta",
+    "publish:ui-react": "cd packages/ui-react && yarn install && yarn build && npm publish --access=public --tag=beta"
   },
   "private": true,
   "dependencies": {},
