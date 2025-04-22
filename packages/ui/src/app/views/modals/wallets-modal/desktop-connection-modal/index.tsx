@@ -5,7 +5,7 @@ import {
     WalletMissingRequiredFeaturesError,
     WalletInfoInjectable,
     WalletInfoRemote
-} from '@tonconnect/sdk';
+} from '@ion-gateway/sdk';
 import {
     Component,
     createEffect,
@@ -200,7 +200,7 @@ export const DesktopConnectionModal: Component<DesktopConnectionProps> = props =
     }
 
     return (
-        <DesktopConnectionModalStyled data-tc-wallets-modal-connection-desktop="true">
+        <DesktopConnectionModalStyled data-tc-wallets-modal-connection-desktop="true" class="desktop-connection-modal">
             <Show when={!props.backDisabled}>
                 <StyledIconButton icon="arrow" onClick={() => props.onBackClick()} />
             </Show>

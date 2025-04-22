@@ -38,10 +38,10 @@ body:
         Please confirm that you have checked the relevant documentation. It might have the answer you're looking for.
 
         Documentation resources:
-        - [@tonconnect/ui-react Documentation](https://github.com/ton-connect/sdk/blob/main/packages/ui-react/README.md)
-        - [@tonconnect/ui Documentation](https://github.com/ton-connect/sdk/tree/main/packages/ui/README.md)
-        - [@tonconnect/sdk Documentation](https://github.com/ton-connect/sdk/blob/main/packages/sdk/README.md)
-        - [@tonconnect/protocol Documentation](https://github.com/ton-connect/sdk/blob/main/packages/protocol/README.md)
+        - [@ion-gateway/ui-react Documentation](https://github.com/ion-gateway/sdk/blob/main/packages/ui-react/README.md)
+        - [@ion-gateway/ui Documentation](https://github.com/ion-gateway/sdk/tree/main/packages/ui/README.md)
+        - [@ion-gateway/sdk Documentation](https://github.com/ion-gateway/sdk/blob/main/packages/sdk/README.md)
+        - [@ion-gateway/protocol Documentation](https://github.com/ion-gateway/sdk/blob/main/packages/protocol/README.md)
       options:
         - label: "Yes, I have checked the documentation."
           required: true

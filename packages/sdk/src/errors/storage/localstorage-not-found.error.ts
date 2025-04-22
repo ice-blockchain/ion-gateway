@@ -1,4 +1,4 @@
-import { TonConnectError } from 'src/errors/ton-connect.error';
+import { TonConnectError } from 'src/errors/ion-gateway.error';
 
 /**
  * Thrown when `Storage` was not specified in the `DappMetadata` and default `localStorage` was not detected in the Node.js environment.

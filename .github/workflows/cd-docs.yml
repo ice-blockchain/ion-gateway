@@ -30,7 +30,7 @@ jobs:
 
       - name: Commit and push changes
         run: |
-            git config --global user.email "BOT_TonConnect_Builder@tonconnect.ton"
+            git config --global user.email "BOT_TonConnect_Builder@ion-gateway.ton"
             git config --global user.name "BOT_TonConnect_Builder"
             git add -A
             git commit -m "build(docs): docs rebuild by github action"

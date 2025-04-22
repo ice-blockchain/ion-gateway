@@ -1,15 +1,15 @@
-# @tonconnect/isomorphic-eventsource
+# @ion-gateway/isomorphic-eventsource
 
 This package provides `EventSource` applicable in different environments (browser & NodeJS).
 
 ## Get started
-`npm i @tonconnect/isomorphic-eventsource`
+`npm i @ion-gateway/isomorphic-eventsource`
 
 ## How to use
 Just import the package and use global `EventSource` constructor:
 
 ```ts
-import '@tonconnect/isomorphic-eventsource';
+import '@ion-gateway/isomorphic-eventsource';
 
 const eventSourceInstance = new EventSource();
 ```

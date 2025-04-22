@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ConnectedWallet, Wallet, WalletInfoWithOpenMethod } from '@tonconnect/ui';
+import { ConnectedWallet, Wallet, WalletInfoWithOpenMethod } from '@ion-gateway/ui';
 import { useTonConnectUI } from './useTonConnectUI';
 
 /**

@@ -1,15 +1,15 @@
-# @tonconnect/isomorphic-fetch
+# @ion-gateway/isomorphic-fetch
 
 This package provides `fetch` applicable in different environments (browser & NodeJS).
 
 ## Get started
-`npm i @tonconnect/isomorphic-fetch`
+`npm i @ion-gateway/isomorphic-fetch`
 
 ## How to use
 Just import the package and use global `fetch` function:
 
 ```ts
-import '@tonconnect/isomorphic-fetch';
+import '@ion-gateway/isomorphic-fetch';
 
 const result = await fetch('https://example.com');
 ```
