@@ -8,11 +8,11 @@ import {
     setSingleWalletModalState,
     setWalletsModalState
 } from 'src/app/state/modals-state';
-import { TonConnectUI } from 'src/ton-connect-ui';
+import { TonConnectUI } from 'src/ion-gateway-ui';
 import App from './App';
 import { WalletInfoWithOpenMethod, WalletOpenMethod } from 'src/models/connected-wallet';
 import { WalletsModalCloseReason } from 'src/models';
-import { WalletInfoRemote } from '@tonconnect/sdk';
+import { WalletInfoRemote } from '@ion-gateway/sdk';
 
 export const widgetController = {
     openWalletsModal: (): void =>

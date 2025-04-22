@@ -37,7 +37,7 @@ export function getDocument(): Document | undefined {
 export function getWebPageManifest(): string {
     const origin = getWindow()?.location.origin;
     if (origin) {
-        return origin + '/tonconnect-manifest.json';
+        return origin + '/ionconnect-manifest.json';
     }
 
     return '';
@@ -53,7 +53,7 @@ export function tryGetLocalStorage(): Storage {
 
     if (isNodeJs()) {
         throw new TonConnectError(
-            '`localStorage` is unavailable, but it is required for TonConnect. For more details, see https://github.com/ton-connect/sdk/tree/main/packages/sdk#init-connector'
+            '`localStorage` is unavailable, but it is required for TonConnect. For more details, see https://github.com/ion-gateway/sdk/tree/main/packages/sdk#init-connector'
         );
     }
 
