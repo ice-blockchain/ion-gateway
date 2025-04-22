@@ -12,8 +12,8 @@ export const DisconnectIcon: Component<DisconnectIconProps> = props => {
 
     return (
         <svg
-            width="70"
-            height="70"
+            width="24"
+            height="24"
             viewBox="0 0 70 70"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
