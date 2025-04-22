@@ -7,7 +7,7 @@ import {
     WalletInfoRemote,
     checkRequiredWalletFeatures,
     WalletInfo
-} from '@tonconnect/sdk';
+} from '@ion-gateway/sdk';
 import {
     Component,
     createEffect,
@@ -23,7 +23,7 @@ import {
 import { ConnectorContext } from 'src/app/state/connector.context';
 import { getWalletsModalIsOpened } from 'src/app/state/modals-state';
 import { H1Styled, LoaderContainerStyled, StyledModal } from './style';
-import { TonConnectUiContext } from 'src/app/state/ton-connect-ui.context';
+import { TonConnectUiContext } from 'src/app/state/ion-gateway-ui.context';
 import { useI18n } from '@solid-primitives/i18n';
 import { appState } from 'src/app/state/app.state';
 import { applyWalletsListConfiguration, eqWalletName } from 'src/app/utils/wallets';
@@ -181,7 +181,7 @@ export const WalletsModal: Component = () => {
             enableAndroidBackHandler={appState.enableAndroidBackHandler}
             onClose={() => onClose('action-cancelled')}
             onClickQuestion={() => setInfoTab(v => !v)}
-            data-tc-wallets-modal-container="true"
+            data-tc-wallets-modal-container="true" class="wallets-modal"
         >
             <Show when={infoTab()}>
                 <InfoModal onBackClick={() => setInfoTab(false)} />

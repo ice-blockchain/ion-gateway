@@ -1,4 +1,4 @@
-import { SessionCrypto } from '@tonconnect/protocol';
+import { SessionCrypto } from '@ion-gateway/protocol';
 
 export interface BridgeSession {
     sessionCrypto: SessionCrypto;

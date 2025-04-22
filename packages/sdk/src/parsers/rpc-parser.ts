@@ -4,7 +4,7 @@ import {
     WalletResponse,
     WalletResponseError,
     WalletResponseSuccess
-} from '@tonconnect/protocol';
+} from '@ion-gateway/protocol';
 import { WithoutId } from 'src/utils/types';
 
 export abstract class RpcParser<T extends RpcMethod> {

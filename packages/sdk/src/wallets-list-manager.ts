@@ -28,7 +28,7 @@ export class WalletsListManager {
     }) {
         this.walletsListSource =
             options?.walletsListSource ??
-            'https://raw.githubusercontent.com/ton-blockchain/wallets-list/main/wallets-v2.json';
+            'https://raw.githubusercontent.com/ice-blockchain/wallets-list/refs/heads/master/wallets-v2.json';
 
         this.cacheTTLMs = options?.cacheTTLMs;
     }

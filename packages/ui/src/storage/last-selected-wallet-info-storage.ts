@@ -4,7 +4,7 @@ import { tryGetLocalStorage } from 'src/app/utils/web-api';
 export class LastSelectedWalletInfoStorage {
     private readonly localStorage: Storage;
 
-    private readonly storageKey = 'ton-connect-ui_last-selected-wallet-info';
+    private readonly storageKey = 'ion-gateway-ui_last-selected-wallet-info';
 
     constructor() {
         this.localStorage = tryGetLocalStorage();

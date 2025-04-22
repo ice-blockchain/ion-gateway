@@ -1,4 +1,4 @@
-import { WalletInfo, TonConnect } from '@tonconnect/sdk';
+import { WalletInfo, TonConnect } from '@ion-gateway/sdk';
 import { UIWallet } from 'src/models/ui-wallet';
 import { WalletsListConfiguration } from 'src/models';
 import { mergeConcat } from 'src/app/utils/array';

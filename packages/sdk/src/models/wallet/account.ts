@@ -1,4 +1,4 @@
-import { CHAIN } from '@tonconnect/protocol';
+import { CHAIN } from '@ion-gateway/protocol';
 
 export interface Account {
     /**
