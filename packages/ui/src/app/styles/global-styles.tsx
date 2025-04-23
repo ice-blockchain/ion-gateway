@@ -80,7 +80,8 @@ tc-root .desktop-universal-modal ul button > div:first-child > div {
 tc-root .wallets-modal .desktop-universal-modal h1:before {
   display: block;
   content: '';
-  background: #0166ff;
+  background: url("https://cdn.ice.io/ion/assets/wallet.png");
+  background-size: contain;
   border-radius: 14px;
   margin: auto;
   width: 44px;
@@ -165,7 +166,8 @@ tc-root .confirm-transaction-modal , tc-root .transaction-canceled-modal, tc-roo
 tc-root .confirm-transaction-modal h1:before, .transaction-canceled-modal h1:before, .transaction-sent-modal  h1:before {
   display: block;
   content: '';
-  background: #0166ff;
+  background: url("https://cdn.ice.io/ion/assets/pending.png");
+  background-size: contain;
   border-radius: 14px;
   margin: auto;
   width: 44px;
@@ -185,17 +187,20 @@ tc-root .confirm-transaction-modal h1, .transaction-canceled-modal h1, .transact
 }
 
 .transaction-canceled-modal h1:before {
-  background-color: #FD4E4E;
+  background: url("https://cdn.ice.io/ion/assets/error.png");
+  background-size: contain;
 }
 
 .transaction-sent-modal h1:before {
-  background-color: #35D487;
+  background: url("https://cdn.ice.io/ion/assets/success.png");
+  background-size: contain;
 }
 
 tc-root .wallets-modal .desktop-connection-modal h2:before {
   display: block;
   content: '';
-  background: #0166ff;
+  background: url("https://cdn.ice.io/ion/assets/pending.png");
+  background-size: contain;
   border-radius: 14px;
   margin: auto;
   width: 44px;
