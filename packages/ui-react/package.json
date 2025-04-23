@@ -1,6 +1,6 @@
 {
   "name": "@ion-gateway/ui-react",
-  "version": "2.1.1-beta.1",
+  "version": "2.1.1-beta.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build"
@@ -52,8 +52,7 @@
     "vite-plugin-dts": "^1.7.1"
   },
   "dependencies": {
-    "@ion-gateway/ui": "2.1.1-beta.0",
-    "typescript": "^5.8.3"
+    "@ion-gateway/ui": "2.1.1-beta.0"
   },
   "peerDependencies": {
     "react": ">=17.0.0",
