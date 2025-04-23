@@ -1,4 +1,4 @@
-import { WalletInfo } from '@tonconnect/sdk';
+import { WalletInfo } from '@ion-gateway/sdk';
 
 export type UIWalletInfo = WalletInfo & {
     isPreferred?: boolean;

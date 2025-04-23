@@ -4,7 +4,7 @@
     "version": {
       "executor": "@jscutlery/semver:version",
       "options": {
-        "changelogHeader": "# Changelog @tonconnect/isomorphic-fetch \n",
+        "changelogHeader": "# Changelog @ion-gateway/isomorphic-fetch \n",
         "push": false
       }
     }

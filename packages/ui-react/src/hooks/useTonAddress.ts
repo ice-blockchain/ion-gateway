@@ -1,4 +1,4 @@
-import { CHAIN, toUserFriendlyAddress } from '@tonconnect/ui';
+import { CHAIN, toUserFriendlyAddress } from '@ion-gateway/ui';
 import { useTonWallet } from './useTonWallet';
 import { useMemo } from 'react';
 

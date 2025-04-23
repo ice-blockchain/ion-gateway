@@ -4,8 +4,8 @@ import { CopyIcon } from 'src/app/components/icons/copy-icon';
 import { DisconnectIcon } from 'src/app/components/icons/disconnect-icon';
 import { Styleable } from 'src/app/models/styleable';
 import { Translateable } from 'src/app/models/translateable';
-import { TonConnectUiContext } from 'src/app/state/ton-connect-ui.context';
-import { CHAIN, toUserFriendlyAddress } from '@tonconnect/sdk';
+import { TonConnectUiContext } from 'src/app/state/ion-gateway-ui.context';
+import { CHAIN, toUserFriendlyAddress } from '@ion-gateway/sdk';
 import { copyToClipboard } from 'src/app/utils/copy-to-clipboard';
 import { AccountButtonDropdownStyled, MenuButtonStyled, UlStyled } from './style';
 
