@@ -1,10 +1,10 @@
-export * from './ton-connect';
+export * from './ion-gateway';
 export * from './models';
 export * from './errors';
 export { IStorage } from './storage/models/storage.interface';
-export { TonConnect as default } from './ton-connect';
+export { TonConnect as default } from './ion-gateway';
 export { WalletsListManager } from './wallets-list-manager';
-export { ITonConnect } from './ton-connect.interface';
+export { ITonConnect } from './ion-gateway.interface';
 export type {
     EventDispatcher,
     RemoveTonConnectPrefix,
@@ -51,7 +51,7 @@ export type {
     WithoutVersion
 } from './tracker/types';
 export { BrowserEventDispatcher } from './tracker/browser-event-dispatcher';
-export type { TonAddressItem, TonProofItem, ConnectItem } from '@tonconnect/protocol';
+export type { TonAddressItem, TonProofItem, ConnectItem } from '@ion-gateway/protocol';
 export {
     CHAIN,
     ConnectEventSuccess,
@@ -69,7 +69,7 @@ export {
     CONNECT_ITEM_ERROR_CODES,
     CONNECT_EVENT_ERROR_CODES,
     SEND_TRANSACTION_ERROR_CODES
-} from '@tonconnect/protocol';
+} from '@ion-gateway/protocol';
 export { toUserFriendlyAddress } from './utils/address';
 export { checkRequiredWalletFeatures }  from './utils/feature-support';
 export { isTelegramUrl, encodeTelegramUrlParameters } from './utils/url';

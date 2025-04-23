@@ -7,7 +7,7 @@ import {
     RpcMethod,
     WalletEvent,
     WalletResponse
-} from '@tonconnect/protocol';
+} from '@ion-gateway/protocol';
 import {
     InjectedWalletApi,
     isJSBridgeWithMetadata
@@ -23,7 +23,7 @@ import { logDebug } from 'src/utils/log';
 
 type WindowWithTon<T extends string> = {
     [key in T]: {
-        tonconnect: InjectedWalletApi;
+        ionconnect: InjectedWalletApi;
     };
 } & Window;
 
@@ -42,7 +42,7 @@ export class InjectedProvider<T extends string = string> implements InternalProv
 
     public static isInsideWalletBrowser(injectedWalletKey: string): boolean {
         if (InjectedProvider.isWindowContainsWallet(this.window, injectedWalletKey)) {
-            return this.window[injectedWalletKey]!.tonconnect.isWalletBrowser;
+            return this.window[injectedWalletKey]!.ionconnect.isWalletBrowser;
         }
 
         return false;
@@ -54,21 +54,21 @@ export class InjectedProvider<T extends string = string> implements InternalProv
         }
 
         const windowKeys = tryGetWindowKeys();
-        const wallets = windowKeys.filter(([_, value]) =>
+        const wallets = windowKeys.map((key) => [key, (globalThis.window as any)[key]]).filter(([_, value]) =>
             isJSBridgeWithMetadata(value)
-        ) as unknown as [string, { tonconnect: InjectedWalletApi }][];
+        ) as unknown as [string, { ionconnect: InjectedWalletApi }][];
 
         return wallets.map(([jsBridgeKey, wallet]) => ({
-            name: wallet.tonconnect.walletInfo.name,
-            appName: wallet.tonconnect.walletInfo.app_name,
-            aboutUrl: wallet.tonconnect.walletInfo.about_url,
-            imageUrl: wallet.tonconnect.walletInfo.image,
-            tondns: wallet.tonconnect.walletInfo.tondns,
+            name: wallet.ionconnect.walletInfo.name,
+            appName: wallet.ionconnect.walletInfo.app_name,
+            aboutUrl: wallet.ionconnect.walletInfo.about_url,
+            imageUrl: wallet.ionconnect.walletInfo.image,
+            tondns: wallet.ionconnect.walletInfo.tondns,
             jsBridgeKey,
             injected: true,
-            embedded: wallet.tonconnect.isWalletBrowser,
-            platforms: wallet.tonconnect.walletInfo.platforms,
-            features: wallet.tonconnect.walletInfo.features
+            embedded: wallet.ionconnect.isWalletBrowser,
+            platforms: wallet.ionconnect.walletInfo.platforms,
+            features: wallet.ionconnect.walletInfo.features
         }));
     }
 
@@ -80,7 +80,7 @@ export class InjectedProvider<T extends string = string> implements InternalProv
             !!window &&
             injectedWalletKey in window &&
             typeof window[injectedWalletKey as keyof Window] === 'object' &&
-            'tonconnect' in window[injectedWalletKey as keyof Window]
+            'ionconnect' in window[injectedWalletKey as keyof Window]
         );
     }
 
@@ -103,7 +103,7 @@ export class InjectedProvider<T extends string = string> implements InternalProv
         }
 
         this.connectionStorage = new BridgeConnectionStorage(storage);
-        this.injectedWallet = window[injectedWalletKey]!.tonconnect!;
+        this.injectedWallet = window[injectedWalletKey]!.ionconnect!;
     }
 
     public connect(message: ConnectRequest): void {

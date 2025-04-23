@@ -141,7 +141,7 @@ export function tryGetLocalStorage(): Storage {
 
     if (isNodeJs()) {
         throw new TonConnectUIError(
-            '`localStorage` is unavailable, but it is required for TonConnect. For more details, see https://github.com/ton-connect/sdk/tree/main/packages/sdk#init-connector'
+            '`localStorage` is unavailable, but it is required for TonConnect. For more details, see https://github.com/ion-gateway/sdk/tree/main/packages/sdk#init-connector'
         );
     }
 

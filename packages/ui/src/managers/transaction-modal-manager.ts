@@ -1,4 +1,4 @@
-import { ITonConnect } from '@tonconnect/sdk';
+import { ITonConnect } from '@ion-gateway/sdk';
 import { createEffect } from 'solid-js';
 import { action, Action } from 'src/app/state/modals-state';
 
