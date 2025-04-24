@@ -10,8 +10,8 @@ import {
     WalletEvent,
     WalletMessage,
     WalletResponse
-} from '@tonconnect/protocol';
-import { TonConnectError } from 'src/errors/ton-connect.error';
+} from '@ion-gateway/protocol';
+import { TonConnectError } from 'src/errors/ion-gateway.error';
 import { WalletConnectionSourceHTTP } from 'src/models/wallet/wallet-connection-source';
 import { BridgeGateway } from 'src/provider/bridge/bridge-gateway';
 import {
@@ -487,7 +487,7 @@ export class BridgeProvider implements HTTPProvider {
         const urlToWrap = this.generateRegularUniversalLink('about:blank', message);
         const linkParams = urlToWrap.split('?')[1]!;
 
-        const startapp = 'tonconnect-' + encodeTelegramUrlParameters(linkParams);
+        const startapp = 'ionconnect-' + encodeTelegramUrlParameters(linkParams);
 
         // TODO: Remove this line after all dApps and the wallets-list.json have been updated
         const updatedUniversalLink = this.convertToDirectLink(universalLink);

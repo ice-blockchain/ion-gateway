@@ -1,5 +1,5 @@
 {
-  "name": "@tonconnect/sdk",
+  "name": "@ion-gateway/sdk",
   "version": "3.1.1-beta.0",
   "scripts": {
     "build": "npx rimraf types-dist && npx rimraf lib && npx rollup -c rollup.config.mjs && ttsc --project tsconfig.declarations.json && api-extractor run && npx rimraf types-dist && npx rimraf dist && npx webpack --config webpack.config.js",
@@ -7,26 +7,26 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ton-connect/sdk.git"
+    "url": "git+https://github.com/ice-blockchain/ion-gateway.git"
   },
-  "homepage": "https://github.com/ton-connect/sdk/tree/main/packages/sdk",
+  "homepage": "https://github.com/ion-gateway/sdk/tree/main/packages/sdk",
   "bugs": {
-    "url": "https://github.com/ton-connect/sdk/issues"
+    "url": "https://github.com/ice-blockchain/ion-gateway/issues"
   },
   "keywords": [
-    "TON",
+    "ION",
     "Wallet",
-    "ton-connect",
+    "ion-gateway",
     "Connect",
-    "Tonkeeper",
+    "ION Wallet",
     "sdk"
   ],
-  "author": "tonconnect",
+  "author": "ionconnect",
   "license": "Apache-2.0",
   "dependencies": {
-    "@tonconnect/isomorphic-eventsource": "^0.0.2",
-    "@tonconnect/isomorphic-fetch": "^0.0.3",
-    "@tonconnect/protocol": "^2.2.7"
+    "@ion-gateway/isomorphic-eventsource": "^0.0.2",
+    "@ion-gateway/isomorphic-fetch": "^0.0.3",
+    "@ion-gateway/protocol": "^2.2.7"
   },
   "files": [
     "lib",
