@@ -5,12 +5,12 @@ import {
     isWalletInfoCurrentlyEmbedded,
     ITonConnect,
     WalletInfoCurrentlyEmbedded
-} from '@tonconnect/sdk';
+} from '@ion-gateway/sdk';
 import { appState } from 'src/app/state/app.state';
 import { widgetController } from 'src/app/widget-controller';
 import { WalletsModal, WalletsModalCloseReason, WalletsModalState } from 'src/models/wallets-modal';
 import { isInTMA, sendExpand } from 'src/app/utils/tma-api';
-import { TonConnectUITracker } from 'src/tracker/ton-connect-ui-tracker';
+import { TonConnectUITracker } from 'src/tracker/ion-gateway-ui-tracker';
 
 interface WalletsModalManagerCreateOptions {
     /**

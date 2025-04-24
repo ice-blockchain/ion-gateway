@@ -14,11 +14,11 @@ export default [
     },
     plugins: [
       replace({
-        TON_CONNECT_SDK_VERSION: JSON.stringify(version)
+        ION_CONNECT_SDK_VERSION: JSON.stringify(version)
       }),
       typescript()
     ],
-    external: ["@tonconnect/protocol", "@tonconnect/isomorphic-fetch", "@tonconnect/isomorphic-eventsource"]
+    external: ["@ion-gateway/protocol", "@ion-gateway/isomorphic-fetch", "@ion-gateway/isomorphic-eventsource"]
   },
   {
     input: "src/index.ts",
@@ -29,10 +29,10 @@ export default [
     },
     plugins: [
       replace({
-        TON_CONNECT_SDK_VERSION: JSON.stringify(version)
+        ION_CONNECT_SDK_VERSION: JSON.stringify(version)
       }),
       typescript()
     ],
-    external: ["@tonconnect/protocol", "@tonconnect/isomorphic-fetch", "@tonconnect/isomorphic-eventsource"]
+    external: ["@ion-gateway/protocol", "@ion-gateway/isomorphic-fetch", "@ion-gateway/isomorphic-eventsource"]
   }
 ];

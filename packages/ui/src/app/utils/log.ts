@@ -1,7 +1,7 @@
 export function logDebug(...args: Parameters<Console['debug']>): void {
     if (typeof 'console' !== undefined) {
         try {
-            console.debug('[TON_CONNECT_UI]', ...args);
+            console.debug('[ION_CONNECT_UI]', ...args);
         } catch {}
     }
 }
@@ -9,7 +9,7 @@ export function logDebug(...args: Parameters<Console['debug']>): void {
 export function logError(...args: Parameters<Console['error']>): void {
     if (typeof 'console' !== undefined) {
         try {
-            console.error('[TON_CONNECT_UI]', ...args);
+            console.error('[ION_CONNECT_UI]', ...args);
         } catch {}
     }
 }
@@ -17,7 +17,7 @@ export function logError(...args: Parameters<Console['error']>): void {
 export function logWarning(...args: Parameters<Console['warn']>): void {
     if (typeof 'console' !== undefined) {
         try {
-            console.warn('[TON_CONNECT_UI]', ...args);
+            console.warn('[ION_CONNECT_UI]', ...args);
         } catch {}
     }
 }

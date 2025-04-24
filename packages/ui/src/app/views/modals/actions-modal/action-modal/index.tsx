@@ -10,8 +10,8 @@ import {
 } from './style';
 import { WithDataAttributes } from 'src/app/models/with-data-attributes';
 import { useDataAttributes } from 'src/app/hooks/use-data-attributes';
-import { TonConnectUiContext } from 'src/app/state/ton-connect-ui.context';
-import { isTelegramUrl } from '@tonconnect/sdk';
+import { TonConnectUiContext } from 'src/app/state/ion-gateway-ui.context';
+import { isTelegramUrl } from '@ion-gateway/sdk';
 import { appState } from 'src/app/state/app.state';
 import { action } from 'src/app/state/modals-state';
 import { isInTMA } from 'src/app/utils/tma-api';
