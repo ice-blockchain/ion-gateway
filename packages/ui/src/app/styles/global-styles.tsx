@@ -215,6 +215,29 @@ tc-root .wallets-modal div > svg {
   display: none !important;
 }
 
+tc-root .wallets-modal > button:first-child,
+tc-root .confirm-transaction-modal > button:first-child,
+tc-root .transaction-sent-modal  > button:first-child,
+tc-root .transaction-canceled-modal > button:first-child {
+  display: block!important;
+  background: transparent;
+}
+
+
+.wallets-modal .desktop-universal-modal ul button > div:first-child::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-image: url(https://cdn.ice.io/ion/assets/chrome.png);
+  background-size: contain;
+  width: 18px;
+  height: 18px;
+  bottom: -5px;
+  right: -5px;
+  border: 0.5px solid rgba(0, 0, 0, 0.08);
+  border-radius: inherit;
+}
+
 .desktop-connection-modal h2 {
   color: #0E0E0E;
   font-feature-settings: 'liga' off, 'clig' off;

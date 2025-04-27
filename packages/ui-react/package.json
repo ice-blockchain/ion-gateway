@@ -1,6 +1,6 @@
 {
   "name": "@ion-gateway/ui-react",
-  "version": "2.1.1-beta.6",
+  "version": "2.1.1-beta.7",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build"

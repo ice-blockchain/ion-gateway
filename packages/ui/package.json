@@ -1,6 +1,6 @@
 {
   "name": "@ion-gateway/ui",
-  "version": "2.1.1-beta.6",
+  "version": "2.1.1-beta.7",
   "scripts": {
     "start": "vite --host",
     "dev": "vite",
