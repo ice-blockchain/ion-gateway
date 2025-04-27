@@ -70,7 +70,7 @@
     "solid-styled-components": "^0.28.5",
     "solid-transition-group": "^0.0.12",
     "typescript": "^4.8.2",
-    "vite": "^3.0.9",
+    "vite": "^4.5.13",
     "vite-plugin-solid": "^2.3.0"
   },
   "typedoc": {
