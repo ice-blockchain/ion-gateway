@@ -1,11 +1,11 @@
 /* @refresh reload */
-import { TonConnectUI } from 'src/ton-connect-ui';
+import { TonConnectUI } from 'src/ion-gateway-ui';
 import { THEME } from 'src/models';
-import { SendTransactionRequest, TonConnect } from '@tonconnect/sdk';
+import { SendTransactionRequest, TonConnect } from '@ion-gateway/sdk';
 
 async function dev(): Promise<void> {
     const connector = new TonConnect({
-        manifestUrl: 'https://demo-dapp.walletbot.net/demo-dapp/tonconnect-manifest.json'
+        manifestUrl: 'https://demo-dapp.walletbot.net/demo-dapp/ionconnect-manifest.json'
     });
     const tonConnectUI = new TonConnectUI({
         connector,
@@ -28,7 +28,7 @@ async function dev(): Promise<void> {
                     bridgeUrl: `https://bridge.tonapi.io/bridge`,
                     universalLink: 'https://t.me/wallet',
                     aboutUrl: '',
-                    imageUrl: 'https://tonkeeper.com/assets/tonconnect-icon.png',
+                    imageUrl: 'https://tonkeeper.com/assets/ionconnect-icon.png',
                     platforms: ['ios']
                 }
             ]

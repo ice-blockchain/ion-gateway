@@ -1,4 +1,4 @@
-import { TonConnectError } from 'src/errors/ton-connect.error';
+import { TonConnectError } from 'src/errors/ion-gateway.error';
 
 /**
  * Thrown when app tries to send rpc request to the injected wallet while not connected.

@@ -1,4 +1,4 @@
-import { TonConnectError } from 'src/errors/ton-connect.error';
+import { TonConnectError } from 'src/errors/ion-gateway.error';
 
 /**
  * Thrown when there is an attempt to connect to the injected wallet while it is not exists in the webpage.

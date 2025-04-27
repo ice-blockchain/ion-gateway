@@ -1,7 +1,7 @@
 import { Component, useContext } from 'solid-js';
 import { ActionModal } from 'src/app/views/modals/actions-modal/action-modal';
 import { LoaderIcon } from 'src/app/components';
-import { TonConnectUiContext } from 'src/app/state/ton-connect-ui.context';
+import { TonConnectUiContext } from 'src/app/state/ion-gateway-ui.context';
 import { useI18n } from '@solid-primitives/i18n';
 
 interface ConfirmTransactionModalProps {

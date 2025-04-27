@@ -1,8 +1,8 @@
-import { CONNECT_EVENT_ERROR_CODES, ConnectItem, SEND_TRANSACTION_ERROR_CODES } from '@tonconnect/protocol';
+import { CONNECT_EVENT_ERROR_CODES, ConnectItem, SEND_TRANSACTION_ERROR_CODES } from '@ion-gateway/protocol';
 import { SendTransactionRequest, SendTransactionResponse, Wallet } from 'src/models';
 
 /**
- * Request TON Connect UI version.
+ * Request ION Gateway UI version.
  */
 export type RequestVersionEvent = {
     /**
@@ -21,7 +21,7 @@ export function createRequestVersionEvent(): RequestVersionEvent {
 }
 
 /**
- * Response TON Connect UI version.
+ * Response ION Gateway UI version.
  */
 export type ResponseVersionEvent = {
     /**
@@ -29,7 +29,7 @@ export type ResponseVersionEvent = {
      */
     type: 'response-version';
     /**
-     * TON Connect UI version.
+     * ION Gateway UI version.
      */
     version: string;
 };
@@ -51,15 +51,15 @@ export function createResponseVersionEvent(version: string): ResponseVersionEven
 export type VersionEvent = RequestVersionEvent | ResponseVersionEvent;
 
 /**
- * Version of the TON Connect SDK and TON Connect UI.
+ * Version of the ION Gateway SDK and ION Gateway UI.
  */
 export type Version = {
     /**
-     * TON Connect SDK version.
+     * ION Gateway SDK version.
      */
     ton_connect_sdk_lib: string | null;
     /**
-     * TON Connect UI version.
+     * ION Gateway UI version.
      */
     ton_connect_ui_lib: string | null;
 };

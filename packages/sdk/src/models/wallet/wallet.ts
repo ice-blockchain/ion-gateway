@@ -1,4 +1,4 @@
-import { DeviceInfo, TonProofItemReply } from '@tonconnect/protocol';
+import { DeviceInfo, TonProofItemReply } from '@ion-gateway/protocol';
 import { Account } from 'src/models';
 
 export interface Wallet {

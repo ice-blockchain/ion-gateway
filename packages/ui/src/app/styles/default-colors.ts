@@ -6,11 +6,11 @@ export const defaultLightColorsSet: ColorsSet = {
         white: '#FFFFFF'
     },
     connectButton: {
-        background: '#0098EA',
+        background: '#2B64F6',
         foreground: '#FFFFFF'
     },
-    accent: '#0098EA',
-    telegramButton: '#0098EA',
+    accent: '#2B64F6',
+    telegramButton: '#2B64F6',
     icon: {
         primary: '#0F0F0F',
         secondary: '#7A8999',
@@ -37,7 +37,7 @@ export const defaultDarkColorsSet: ColorsSet = {
         white: '#FFFFFF'
     },
     connectButton: {
-        background: '#0098EA',
+        background: '#2B64F6',
         foreground: '#FFFFFF'
     },
     accent: '#E5E5EA',

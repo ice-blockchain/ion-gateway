@@ -1,1 +1,1 @@
-export { TonConnectUIError } from './ton-connect-ui.error';
+export { TonConnectUIError } from './ion-gateway-ui.error';
