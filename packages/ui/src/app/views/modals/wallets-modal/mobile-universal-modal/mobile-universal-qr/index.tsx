@@ -17,14 +17,14 @@ export const MobileUniversalQR: Component<MobileUniversalQRProps> = props => {
     return (
         <>
             <H1Styled translationKey="walletModal.mobileUniversalModal.connectYourWallet">
-                Connect your TON wallet
+                Connect your ION wallet
             </H1Styled>
             <H2Styled translationKey="walletModal.mobileUniversalModal.scan">
                 Scan with your mobile wallet
             </H2Styled>
             <QrCodeWrapper>
                 <QRCode
-                    imageUrl={IMG.TON}
+                    imageUrl={IMG.ION}
                     sourceUrl={addReturnStrategy(props.universalLink, 'none')}
                     disableCopy
                 />

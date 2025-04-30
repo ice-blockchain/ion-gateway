@@ -1,13 +1,13 @@
 /**
- * Removes the `ton-connect-` and `ton-connect-ui-` prefixes from the given string.
+ * Removes the `ion-gateway-` and `ion-gateway-ui-` prefixes from the given string.
  */
-export type RemoveTonConnectPrefix<T> = T extends `ton-connect-ui-${infer Rest}`
+export type RemoveTonConnectPrefix<T> = T extends `ion-gateway-ui-${infer Rest}`
     ? Rest
-    : T extends `ton-connect-${infer Rest}`
+    : T extends `ion-gateway-${infer Rest}`
     ? Rest
     : T;
 
-export type AddTonConnectPrefix<T extends string> = `ton-connect-${T}` | `ton-connect-ui-${T}`;
+export type AddTonConnectPrefix<T extends string> = `ion-gateway-${T}` | `ion-gateway-ui-${T}`;
 
 /**
  * Interface for an event dispatcher that sends events.

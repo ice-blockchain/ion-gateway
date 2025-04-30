@@ -4,7 +4,7 @@ export class HttpBridgeGatewayStorage {
     private readonly storeKey: string;
 
     constructor(private readonly storage: IStorage, bridgeUrl: string) {
-        this.storeKey = 'ton-connect-storage_http-bridge-gateway::' + bridgeUrl;
+        this.storeKey = 'ion-gateway-storage_http-bridge-gateway::' + bridgeUrl;
     }
 
     public async storeLastEventId(lastEventId: string): Promise<void> {

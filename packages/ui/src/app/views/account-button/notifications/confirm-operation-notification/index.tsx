@@ -2,7 +2,7 @@ import { Component, useContext } from 'solid-js';
 import { Notification } from 'src/app/components/notification';
 import { Styleable } from 'src/app/models/styleable';
 import { LoaderIconStyled } from 'src/app/views/account-button/notifications/confirm-operation-notification/style';
-import { TonConnectUiContext } from 'src/app/state/ton-connect-ui.context';
+import { TonConnectUiContext } from 'src/app/state/ion-gateway-ui.context';
 import { useI18n } from '@solid-primitives/i18n';
 
 interface ConfirmOperationNotificationProps extends Styleable {}

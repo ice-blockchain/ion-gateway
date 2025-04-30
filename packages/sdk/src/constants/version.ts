@@ -1,3 +1,3 @@
-declare const TON_CONNECT_SDK_VERSION: string;
+declare const ION_CONNECT_SDK_VERSION: string;
 
-export const tonConnectSdkVersion = TON_CONNECT_SDK_VERSION;
+export const tonConnectSdkVersion = ION_CONNECT_SDK_VERSION;

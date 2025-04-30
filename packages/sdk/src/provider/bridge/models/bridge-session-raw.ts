@@ -1,4 +1,4 @@
-import { KeyPair } from '@tonconnect/protocol';
+import { KeyPair } from '@ion-gateway/protocol';
 import { BridgeSession } from './bridge-session';
 
 export type BridgeSessionRaw = Omit<BridgeSession, 'sessionCrypto'> & {
