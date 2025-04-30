@@ -7,14 +7,14 @@ import {
     ITonConnect,
     WalletInfoCurrentlyEmbedded,
     WalletInfoRemote
-} from '@tonconnect/sdk';
+} from '@ion-gateway/sdk';
 import { appState } from 'src/app/state/app.state';
 import { widgetController } from 'src/app/widget-controller';
 import { SingleWalletModal, SingleWalletModalState } from 'src/models/single-wallet-modal';
 import { isInTMA, sendExpand } from 'src/app/utils/tma-api';
 import { TonConnectUIError } from 'src/errors';
 import { applyWalletsListConfiguration, eqWalletName } from 'src/app/utils/wallets';
-import { TonConnectUITracker } from 'src/tracker/ton-connect-ui-tracker';
+import { TonConnectUITracker } from 'src/tracker/ion-gateway-ui-tracker';
 import { WalletsModalCloseReason } from 'src/models';
 
 interface SingleWalletModalManagerCreateOptions {
