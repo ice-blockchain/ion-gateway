@@ -199,6 +199,19 @@ export const DesktopConnectionModal: Component<DesktopConnectionProps> = props =
         onClickDesktop();
     }
 
+    let opened = false;
+
+    createEffect(() => {
+        if (!opened && mode() === 'extension' && !isWalletInfoCurrentlyInjected(props.wallet)) {
+            opened = true;
+            window.open(
+                'https://chromewebstore.google.com/detail/ion-wallet/hfajfpbjlmembfdlhakjmefnbhjddofb',
+                '_blank',
+                'noopener,noreferrer'
+            );
+        }
+    });
+
     return (
         <DesktopConnectionModalStyled data-tc-wallets-modal-connection-desktop="true" class="desktop-connection-modal">
             <Show when={!props.backDisabled}>
@@ -297,7 +310,7 @@ export const DesktopConnectionModal: Component<DesktopConnectionProps> = props =
                                 </Button>
                             </ButtonsContainerStyled>
                         </Show>
-                        <Show when={!isWalletInfoCurrentlyInjected(props.wallet)}>
+                        <Show when={!isWalletInfoCurrentlyInjected(props.wallet) && false}>
                             <BodyTextStyled
                                 translationKey="walletModal.desktopConnectionModal.dontHaveExtension"
                                 translationValues={{ name: props.wallet.name }}
