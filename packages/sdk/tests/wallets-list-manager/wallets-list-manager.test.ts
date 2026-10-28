@@ -4,6 +4,7 @@ import { WalletsListManager } from 'src/wallets-list-manager';
 import { defaultWalletsList, walletsListWithWrongWallet, wrongWalletsList } from './mock-data';
 import { FALLBACK_WALLETS_LIST } from 'src/resources/fallback-wallets-list';
 import { FetchWalletsError } from 'src/errors';
+import { WalletInfo } from 'src/models/wallet/wallet-info';
 import { logError } from '../../src/utils/log';
 
 vi.mock('../../src/utils/log', () => {
@@ -40,6 +41,38 @@ describe('Wallets list manager tests', () => {
 
         expect(logError).toBeCalledTimes(0);
         expect(walletsList).toEqual(defaultWalletsList.parsed);
+    });
+
+    it('Should keep distinct wallets and match injected metadata by bridge key', () => {
+        const ionMask: WalletInfo = {
+            name: 'ION Wallet',
+            appName: 'ionmask',
+            imageUrl: 'https://example.com/ionmask.png',
+            aboutUrl: 'https://example.com/ionmask',
+            platforms: ['chrome'],
+            jsBridgeKey: 'ion',
+            injected: false,
+            embedded: false
+        };
+        const ionWallet: WalletInfo = {
+            name: 'ION Wallet',
+            appName: 'ionwallet',
+            imageUrl: 'https://example.com/ionwallet.png',
+            aboutUrl: 'https://example.com/ionwallet',
+            platforms: ['chrome', 'android'],
+            jsBridgeKey: 'ionwallet',
+            injected: false,
+            embedded: false
+        };
+        const injectedMask: WalletInfo = {
+            ...ionMask,
+            appName: 'ION Wallet',
+            jsBridgeKey: 'ionmask',
+            injected: true
+        };
+
+        expect(walletsListManager['mergeWalletsLists']([ionMask, ionWallet], [injectedMask]))
+            .toEqual([{ ...injectedMask, appName: 'ionmask' }, ionWallet]);
     });
 
     it('Should remove wallet with wrong config', async () => {

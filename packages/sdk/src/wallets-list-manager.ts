@@ -7,7 +7,8 @@ import {
     isWalletInfoCurrentlyEmbedded,
     WalletInfoCurrentlyEmbedded,
     WalletInfoCurrentlyInjected,
-    WalletInfoBase
+    WalletInfoBase,
+    isWalletInfoInjectable
 } from 'src/models/wallet/wallet-info';
 import { InjectedProvider } from 'src/provider/injected/injected-provider';
 import { logError } from 'src/utils/log';
@@ -141,17 +142,20 @@ export class WalletsListManager {
     }
 
     private mergeWalletsLists(list1: WalletInfo[], list2: WalletInfo[]): WalletInfo[] {
-        const names = new Set(list1.concat(list2).map(item => item.name));
+        const wallets = new Map(list1.map(wallet => [wallet.appName, wallet]));
 
-        return [...names.values()].map(name => {
-            const list1Item = list1.find(item => item.name === name);
-            const list2Item = list2.find(item => item.name === name);
+        for (const injected of list2) {
+            const bridgeKey = isWalletInfoInjectable(injected) ? injected.jsBridgeKey : undefined;
+            const registered = list1.find(wallet =>
+                wallet.appName === injected.appName ||
+                wallet.appName === bridgeKey ||
+                (isWalletInfoInjectable(wallet) && wallet.jsBridgeKey === bridgeKey)
+            );
+            const appName = registered?.appName ?? injected.appName;
+            wallets.set(appName, { ...registered, ...injected, appName } as WalletInfo);
+        }
 
-            return {
-                ...(list1Item && { ...list1Item }),
-                ...(list2Item && { ...list2Item })
-            } as WalletInfo;
-        });
+        return [...wallets.values()];
     }
 
     // eslint-disable-next-line complexity
