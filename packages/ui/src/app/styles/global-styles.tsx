@@ -80,8 +80,7 @@ tc-root :is(.desktop-universal-modal, .mobile-universal-modal) ul button > div:f
 tc-root .wallets-modal :is(.desktop-universal-modal, .mobile-universal-modal) h1:before {
   display: block;
   content: '';
-  background: url("https://cdn.ice.io/ion/assets/wallet.png");
-  background-size: contain;
+  background: url("https://ionwallet.io/ion-wallet-arcs-288.png") center / contain no-repeat;
   border-radius: 14px;
   margin: auto;
   width: 44px;
